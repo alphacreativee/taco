@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Bringhum Slant";
+  src: url("Bringhum-Slant.eot");
+  src: url("Bringhum-Slant.eot?#iefix") format("embedded-opentype"),
+    url("Bringhum-Slant.woff2") format("woff2"),
+    url("Bringhum-Slant.woff") format("woff"),
+    url("Bringhum-Slant.ttf") format("truetype"),
+    url("Bringhum-Slant.svg#Bringhum-Slant") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bringhum Rounded";
+  src: url("Bringhum-Rounded.eot");
+  src: url("Bringhum-Rounded.eot?#iefix") format("embedded-opentype"),
+    url("Bringhum-Rounded.woff2") format("woff2"),
+    url("Bringhum-Rounded.woff") format("woff"),
+    url("Bringhum-Rounded.ttf") format("truetype"),
+    url("Bringhum-Rounded.svg#Bringhum-Rounded") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bringhum Slant Rounded";
+  src: url("Bringhum-SlantRounded.eot");
+  src: url("Bringhum-SlantRounded.eot?#iefix") format("embedded-opentype"),
+    url("Bringhum-SlantRounded.woff2") format("woff2"),
+    url("Bringhum-SlantRounded.woff") format("woff"),
+    url("Bringhum-SlantRounded.ttf") format("truetype"),
+    url("Bringhum-SlantRounded.svg#Bringhum-SlantRounded") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bringhum";
+  src: url("Bringhum-Regular.eot");
+  src: url("Bringhum-Regular.eot?#iefix") format("embedded-opentype"),
+    url("Bringhum-Regular.woff2") format("woff2"),
+    url("Bringhum-Regular.woff") format("woff"),
+    url("Bringhum-Regular.ttf") format("truetype"),
+    url("Bringhum-Regular.svg#Bringhum-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

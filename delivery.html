@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery</title>
+    <!-- import favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/taco_logo.svg" />
+    <!-- meta -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Taco Del Sol Website" />
+    <meta property="og:description" content="Taco Del Sol Website" />
+    <!-- <meta property="og:image" content="./assets/images/banner.png" /> -->
+    <!-- meta -->
+    <!-- import boostrap css -->
+    <link rel="stylesheet" href="./assets/libs/bootstrap.min.css" />
+    <!-- end boostrap css -->
+    <!-- import lightpick css -->
+    <link rel="stylesheet" href="./assets/libs/lightpick.min.css" />
+    <!-- end lightpick css -->
+    <!-- import css swiper -->
+    <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css" />
+    <!-- end css swiper -->
+    <!-- import font -->
+    <link rel="stylesheet" href="./assets/font/unbounded/font.css" />
+    <link rel="stylesheet" href="./assets/font/bringhum/font.css" />
+    <!-- end import font -->
+    <!-- import link custom css page -->
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <!-- end link custom css page -->
+  </head>
+  <body>
+    <!-- start header -->
+    <header class="header position-fixed top-0 start-0 end-0">
+      <div class="container-fluid p-0">
+        <div
+          class="header__container d-flex align-items-center justify-content-between"
+        >
+          <div class="header__left justify-content-start">
+            <div class="header__music">
+              <a href="">
+                <img src="./assets/images/ic_music.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="header__center d-flex align-items-center">
+            <div class="header__menu --left">
+              <ul>
+                <li>
+                  <a href="./index.html" class="h3-font">HOME</a>
+                </li>
+                <li>
+                  <a href="" class="h3-font">ABOUT</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__logo">
+              <a href="" class="logo">
+                <img src="./assets/images/logo_full.svg" alt="" />
+              </a>
+            </div>
+            <div class="header__menu --right">
+              <ul>
+                <li>
+                  <a href="" class="h3-font">MENU</a>
+                </li>
+                <li>
+                  <a href="./offer.html" class="h3-font">OFFERS</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__right d-flex justify-content-end">
+            <div class="header__phone">
+              <a href="tel:+84 789 92 12 12" class="h3-font"
+                >+84 789 92 12 12</a
+              >
+            </div>
+            <div class="header__lang dropdown-custom">
+              <div class="lang__head dropdown-custom__btn">
+                <div
+                  class="value-select dropdown-custom__text h3-font text-center"
+                >
+                  EN
+                </div>
+              </div>
+              <div class="lang__body dropdown-custom__menu">
+                <div
+                  class="dropdown-custom__item lang__item h3-font text-center"
+                >
+                  VI
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+    <!-- custom cursor-->
+    <div class="cursor-magic"></div>
+    <!-- end cursor-->
+    <!-- start group cta -->
+    <!-- <div class="cta-group position-fixed">
+      <div class="cta__list d-flex align-items-center">
+        <a href="" class="button --book">
+          <span class="h4-font">BOOK A TABLE</span>
+        </a>
+        <a href="" class="button --delivery">
+          <span class="h4-font">DELIVERY</span>
+        </a>
+      </div>
+    </div> -->
+    <!-- end group cta -->
+    <!-- modal cart -->
+    <div class="cta-cart">
+      <button
+        type="button"
+        class="button-cart"
+        data-value="1"
+        data-bs-toggle="modal"
+        data-bs-target="#modalCart"
+      >
+        <img src="./assets/images/icon_cart.svg" alt="" />
+      </button>
+    </div>
+    <div
+      class="modal fade custom-modal"
+      id="modalCart"
+      tabindex="-1"
+      aria-labelledby="modalCartLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-cart">
+          <button type="button" class="btn-close" aria-label="Close">
+            <img src="./assets/images/ic_close_modal.svg" alt="" />
+          </button>
+          <div class="minicart-popup-wrapper">
+            <div class="minicart-popup-body">
+              <div class="minicart-popup-item">
+                <div class="minicart-popup-content">
+                  <div
+                    class="item-added-to-cart-image"
+                    style="
+                      --bg-add-to-cart: url('../images/img_bg_product_1.png');
+                    "
+                  >
+                    <img src="./assets/images/img_product_cake_2.png" alt="" />
+                  </div>
+                  <div class="item-added-to-cart-info">
+                    <h4 class="item-added-to-cart-name h4-font">
+                      mushroom pibil
+                    </h4>
+                    <p class="item-added-to-cart-price h4-font">175.000 Đ</p>
+                  </div>
+                </div>
+                <div class="minicart-popup-quanlity">
+                  <span>-</span>
+                  <p>1</p>
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="minicart-popup-item">
+                <div class="minicart-popup-content">
+                  <div
+                    class="item-added-to-cart-image"
+                    style="
+                      --bg-add-to-cart: url('../images/img_bg_product_1.png');
+                    "
+                  >
+                    <img src="./assets/images/img_product_cake_2.png" alt="" />
+                  </div>
+                  <div class="item-added-to-cart-info">
+                    <h4 class="item-added-to-cart-name h4-font">
+                      mushroom pibil
+                    </h4>
+                    <p class="item-added-to-cart-price h4-font">175.000 Đ</p>
+                  </div>
+                </div>
+                <div class="minicart-popup-quanlity">
+                  <span>-</span>
+                  <p>1</p>
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="minicart-popup-item">
+                <div class="minicart-popup-content">
+                  <div
+                    class="item-added-to-cart-image"
+                    style="
+                      --bg-add-to-cart: url('../images/img_bg_product_1.png');
+                    "
+                  >
+                    <img src="./assets/images/img_product_cake_2.png" alt="" />
+                  </div>
+                  <div class="item-added-to-cart-info">
+                    <h4 class="item-added-to-cart-name h4-font">
+                      mushroom pibil
+                    </h4>
+                    <p class="item-added-to-cart-price h4-font">175.000 Đ</p>
+                  </div>
+                </div>
+                <div class="minicart-popup-quanlity">
+                  <span>-</span>
+                  <p>1</p>
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="minicart-popup-item">
+                <div class="minicart-popup-content">
+                  <div
+                    class="item-added-to-cart-image"
+                    style="
+                      --bg-add-to-cart: url('../images/img_bg_product_1.png');
+                    "
+                  >
+                    <img src="./assets/images/img_product_cake_2.png" alt="" />
+                  </div>
+                  <div class="item-added-to-cart-info">
+                    <h4 class="item-added-to-cart-name h4-font">
+                      mushroom pibil
+                    </h4>
+                    <p class="item-added-to-cart-price h4-font">175.000 Đ</p>
+                  </div>
+                </div>
+                <div class="minicart-popup-quanlity">
+                  <span>-</span>
+                  <p>1</p>
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="minicart-popup-item">
+                <div class="minicart-popup-content">
+                  <div
+                    class="item-added-to-cart-image"
+                    style="
+                      --bg-add-to-cart: url('../images/img_bg_product_1.png');
+                    "
+                  >
+                    <img src="./assets/images/img_product_cake_2.png" alt="" />
+                  </div>
+                  <div class="item-added-to-cart-info">
+                    <h4 class="item-added-to-cart-name h4-font">
+                      mushroom pibil
+                    </h4>
+                    <p class="item-added-to-cart-price h4-font">175.000 Đ</p>
+                  </div>
+                </div>
+                <div class="minicart-popup-quanlity">
+                  <span>-</span>
+                  <p>1</p>
+                  <span>+</span>
+                </div>
+              </div>
+            </div>
+            <div class="minicart-popup-footer">
+              <div class="minicart-popup-subtotal">
+                <h3 class="h3-font">subtotal</h3>
+                <p class="price h3-font">660.000 Đ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="minicart-popup-sumbit">
+        <button href="./cart.html">go to cart</button>
+      </div>
+    </div>
+
+    <!-- end modal cart -->
+    <main>
+      <section class="delivery-sec">
+        <div class="container-fluid p-0">
+          <div class="delivery__container">
+            <div class="delivery-category">
+              <div class="title h2-font">TACOS</div>
+              <div class="delivery-list">
+                <div class="delivery-item" style="--color: #feb503">
+                  <div class="box-img">
+                    <img src="./assets/images/img_bg_product_1.png" alt="" />
+                  </div>
+                  <div class="img">
+                    <img src="./assets/images/taco_1.png" alt="" />
+                  </div>
+
+                  <div class="box">
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery-item" style="--color: #feb503">
+                  <div class="box-img">
+                    <img src="./assets/images/img_bg_product_1.png" alt="" />
+                  </div>
+                  <div class="img">
+                    <img src="./assets/images/taco_1.png" alt="" />
+                  </div>
+
+                  <div class="box">
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery-item" style="--color: #108a00">
+                  <div class="box-img">
+                    <img src="./assets/images/img_bg_product_2.png" alt="" />
+                  </div>
+                  <div class="img">
+                    <img src="./assets/images/taco_1.png" alt="" />
+                  </div>
+
+                  <div class="box">
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery-item" style="--color: #feb503">
+                  <div class="box-img">
+                    <img src="./assets/images/img_bg_product_1.png" alt="" />
+                  </div>
+                  <div class="img">
+                    <img src="./assets/images/taco_1.png" alt="" />
+                  </div>
+
+                  <div class="box">
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery-item" style="--color: #feb503">
+                  <div class="box-img">
+                    <img src="./assets/images/img_bg_product_1.png" alt="" />
+                  </div>
+                  <div class="img">
+                    <img src="./assets/images/taco_1.png" alt="" />
+                  </div>
+
+                  <div class="box">
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery-item" style="--color: #feb503">
+                  <div class="box-img">
+                    <img src="./assets/images/img_bg_product_1.png" alt="" />
+                  </div>
+                  <div class="img">
+                    <img src="./assets/images/taco_1.png" alt="" />
+                  </div>
+
+                  <div class="box">
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="spacing"></div>
+    </main>
+    <!-- start footer -->
+    <footer class="footer">
+      <div class="container-fluid p-0">
+        <div class="footer__container">
+          <div class="footer__top">
+            <div class="footer_chair">
+              <div class="box">
+                <img src="./assets/images/img_ghes.png" alt="" />
+              </div>
+              <div class="text">LET’S FEEL FREE And Say, OLA!</div>
+            </div>
+            <div class="footer__content">
+              <div class="footer__list">
+                <div class="footer__item --address">
+                  <h3 class="h3-font">TACO DEL SOL</h3>
+                  <p class="address b1-font">
+                    4-5 Floor, 110-112 Ly Tu Trong Street, Ben Thanh Ward,
+                    District 1, Ho Chi Minh City
+                  </p>
+                </div>
+                <div class="footer__item --time">
+                  <h3 class="h3-font">COME TO ME</h3>
+                  <ul>
+                    <li class="b1-font">Lunch: 11.30 am - 3 pm</li>
+                    <li class="b1-font">Dinner: 5.30 pm - 11 pm</li>
+                  </ul>
+                </div>
+                <div class="footer__item --map">
+                  <h3 class="h3-font">Destination on map</h3>
+                  <div class="img">
+                    <img src="./assets/images/ic_map.svg" alt="" />
+                  </div>
+                </div>
+                <div class="footer__item --call">
+                  <h3 class="h3-font">CALL ME BABE!</h3>
+                  <a href="tel:+84 789 92 12 12" class="b1-font"
+                    >+84 789 92 12 12</a
+                  >
+                </div>
+                <div class="footer__item --social">
+                  <h3 class="h3-font">Don't forget me!</h3>
+                  <ul>
+                    <li>
+                      <a href=""
+                        ><svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_690_984)">
+                            <path
+                              d="M29.0738 28.7409C27.7678 29.853 23.6002 30.614 18.9374 30.9254C16.6396 31.0842 14.3351 31.1268 12.033 31.0532C7.50393 30.9063 3.62127 30.2834 2.65464 29.0744C0.0529831 25.8176 -1.39842 6.52471 1.94363 3.01666C5.54864 -0.761703 26.24 -0.98059 29.4131 2.32327C33.2517 6.30436 32.5436 25.7911 29.0738 28.7409Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M23.1534 16.8815C22.7946 18.1723 22.5205 19.4851 22.3328 20.8116C21.0506 20.9616 19.8158 21.0847 18.6066 21.1796C18.7874 24.3762 19.0862 27.7267 19.4119 30.8579C17.4062 30.9965 15.3948 31.0337 13.3853 30.9695C13.0271 27.8118 12.8134 24.6395 12.7442 21.4527C11.6774 21.4681 10.5875 21.4604 9.4591 21.4335C9.3546 21.4418 9.25066 21.4117 9.16675 21.3488C9.09763 21.2664 9.06114 21.1615 9.06417 21.0539C8.95261 19.6063 8.86799 18.7702 8.85645 17.3162C10.1502 17.2123 11.4427 17.12 12.7365 17.0508C12.7827 15.2351 12.9314 13.4207 13.4392 11.682C13.6956 10.8037 14.0598 9.91637 14.7471 9.31372C15.3805 8.76235 16.2242 8.50462 17.0551 8.33152C19.3136 7.86257 21.6471 7.89145 23.8933 8.41615C23.8445 10.1866 23.9349 11.9581 24.1638 13.7144C23.1244 13.7117 22.0874 13.814 21.0685 14.0195C20.5851 14.1196 20.0979 14.2452 19.7068 14.5414C19.2195 14.9056 18.9374 15.4851 18.7707 16.0686C18.6978 16.3254 18.6413 16.5867 18.6015 16.8507C20.1222 16.8392 21.6378 16.843 23.1534 16.8815Z"
+                              fill="#EE2400"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_690_984">
+                              <rect
+                                width="32"
+                                height="31.0892"
+                                fill="white"
+                                transform="translate(0 0.000732422)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_690_988)">
+                            <path
+                              d="M1.94363 3.01449C5.54718 -0.769745 26.2371 -0.979817 29.4146 2.32111C33.2502 6.30513 32.5466 25.7904 29.0738 28.7402C25.8419 31.4932 5.07561 32.1043 2.65464 29.0766C0.0529831 25.8183 -1.39842 6.52402 1.94363 3.01449Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M6.33693 7.03608C8.81438 4.48004 23.0388 4.33815 25.2234 6.56774C27.8604 9.25873 27.3766 22.42 24.9891 24.4124C22.7671 26.2719 8.49018 26.6847 6.82575 24.6397C5.0371 22.4388 4.03925 9.40658 6.33693 7.03608Z"
+                              fill="#EE2400"
+                            />
+                            <path
+                              d="M15.5 21.0001C17.9853 21.0001 20 18.9853 20 16.5001C20 14.0148 17.9853 12.0001 15.5 12.0001C13.0147 12.0001 11 14.0148 11 16.5001C11 18.9853 13.0147 21.0001 15.5 21.0001Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M21.5 12.0001C22.3284 12.0001 23 11.3285 23 10.5001C23 9.67163 22.3284 9.00006 21.5 9.00006C20.6716 9.00006 20 9.67163 20 10.5001C20 11.3285 20.6716 12.0001 21.5 12.0001Z"
+                              fill="white"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_690_988">
+                              <rect width="32" height="31.0907" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_690_996)">
+                            <path
+                              d="M29.0833 28.7428C27.7765 29.8541 23.6091 30.6156 18.9522 30.9272C16.6528 31.0862 14.3469 31.1289 12.0433 31.0551C7.51427 30.9081 3.63205 30.2848 2.66481 29.0765C0.0541202 25.8176 -1.39675 6.52555 1.94452 3.01671C5.54891 -0.771433 26.2403 -0.98017 29.4155 2.31553C33.2536 6.30505 32.5466 25.7926 29.0833 28.7428Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M25.0942 11.5781C24.0709 11.9344 22.4249 11.3783 21.8788 10.4426C21.3326 9.50681 21.2426 8.38364 21.1674 7.3024L16.9447 6.04484C16.881 6.01658 16.8123 6.00136 16.7427 6.00009C16.673 5.99882 16.6038 6.01152 16.5391 6.03745C16.3838 6.12621 16.3653 6.33827 16.3653 6.51704C16.3571 9.30092 16.3891 12.084 16.4614 14.8662C16.4836 15.7144 16.5083 16.5688 16.3591 17.4035C16.2099 18.2382 15.866 19.063 15.2581 19.6498C14.6503 20.2367 13.7355 20.5511 12.9156 20.3119C12.0958 20.0727 11.4781 19.2085 11.6396 18.3762C11.8011 17.544 12.8491 16.9744 13.5839 17.3899L13.632 14.8526C13.632 14.7158 13.7417 14.1671 13.6702 14.05C13.5987 13.9329 13.3965 13.8984 13.2609 13.8417C11.9441 13.2918 10.3685 13.3929 9.04559 13.9292C8.27766 14.264 7.61626 14.803 7.13337 15.4876C5.6539 17.4886 5.6539 20.3994 6.95213 22.5151C8.25037 24.6307 10.726 25.9253 13.214 25.9955C15.9054 26.0732 18.4464 25.1411 20.0393 22.9688C20.4363 22.4137 20.7 21.7745 20.8099 21.1009C20.9331 20.4487 21.0404 19.4131 20.9566 18.7584C20.8099 17.5995 20.7384 16.4159 20.5867 15.2595C21.0799 16.1657 22.2437 16.5294 23.2646 16.3864C24.2854 16.2433 25.2002 15.7021 26.0842 15.1695C25.5937 14.0225 25.2607 12.8144 25.0942 11.5781Z"
+                              fill="#EE2400"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_690_996">
+                              <rect
+                                width="32"
+                                height="31.0901"
+                                fill="white"
+                                transform="translate(0 0.000305176)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <svg
+                          width="32"
+                          height="25"
+                          viewBox="0 0 32 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_690_999)">
+                            <path
+                              d="M5.21563 2.93098C7.98045 0.02753 23.8548 -0.133648 26.2927 2.39899C29.2356 5.45573 28.6957 20.4058 26.0312 22.6691C23.5516 24.7813 7.61865 25.2502 5.76116 22.9272C3.76503 20.4272 2.65144 5.62367 5.21563 2.93098Z"
+                              fill="#ED1E24"
+                            />
+                            <path
+                              d="M6.42853 5.16832C6.28942 5.54256 6.1908 5.93063 6.13436 6.32587C6.03291 6.92325 5.96641 7.52851 5.92133 8.12926C5.81876 9.47391 5.80862 10.8253 5.8368 12.1734C5.8661 13.5699 5.94951 14.9652 6.08589 16.355C6.1986 17.4821 6.32822 18.634 6.63029 19.7296C6.71433 20.097 6.85502 20.4491 7.04732 20.7733C7.3043 21.1599 7.68978 21.3898 8.10794 21.5713C9.24971 22.0661 10.4907 22.2475 11.7215 22.3603C13.1083 22.4784 14.5012 22.5089 15.8918 22.4515C17.2658 22.4053 18.6386 22.3016 20.0024 22.1303C21.0506 21.9973 22.1214 21.8587 23.1381 21.5577C23.4587 21.4783 23.7651 21.3498 24.0465 21.1768C24.4049 20.9254 24.5796 20.585 24.7284 20.1838C25.0384 19.3463 25.1364 18.4153 25.2469 17.5351C25.4002 16.3245 25.487 15.105 25.5399 13.8855C25.5986 12.5633 25.6155 11.2379 25.5783 9.91574C25.5542 8.7147 25.4536 7.5164 25.2773 6.32813C25.1522 5.53915 24.9809 4.63745 24.4297 4.01866C24.2007 3.78793 23.9079 3.63093 23.5889 3.56782C23.1978 3.47887 22.8014 3.41562 22.402 3.37846C21.3504 3.25786 20.2876 3.21841 19.2292 3.19699C17.8767 3.16994 16.5279 3.18385 15.1829 3.2387C13.8416 3.2928 12.5014 3.38184 11.1692 3.54302C10.0702 3.67602 8.94539 3.82255 7.8904 4.17195C7.51008 4.2837 7.14735 4.44837 6.81288 4.66112C6.62676 4.77642 6.48894 4.9555 6.42515 5.16494C6.36713 5.38406 6.39748 5.61721 6.50969 5.81416C6.74187 6.17484 7.27613 6.38561 7.66385 6.11736C7.81711 6.01426 7.98067 5.92738 8.1519 5.85812L7.95014 5.94265C8.6591 5.64622 9.4323 5.49181 10.1863 5.37121C10.4557 5.32612 10.7251 5.28667 10.9956 5.2506L10.7702 5.28104C12.4327 5.06999 14.1049 4.94434 15.7802 4.90458C17.4033 4.85386 19.0308 4.85273 20.6528 4.93163C21.3189 4.96432 21.9861 5.00827 22.6478 5.09619L22.4223 5.06576C22.7563 5.09388 23.0852 5.16549 23.4007 5.27878L23.1989 5.19312C23.2384 5.21003 23.2722 5.23257 23.3116 5.25286C23.1538 5.1672 23.1087 5.08154 23.1989 5.17396C23.2203 5.19537 23.2384 5.22017 23.2598 5.24159C23.3026 5.28554 23.0975 5.01616 23.1617 5.11535C23.1696 5.12775 23.1798 5.14015 23.1888 5.15367C23.1978 5.1672 23.2271 5.21341 23.244 5.24497C23.2858 5.31792 23.3234 5.39318 23.3567 5.47039L23.2722 5.26976C23.519 5.85587 23.6193 6.50959 23.7039 7.13289L23.6734 6.90747C23.8389 8.26792 23.9183 9.63746 23.9113 11.0079C23.9203 12.5183 23.8692 14.0278 23.758 15.5367C23.7016 16.2851 23.6306 17.0324 23.5325 17.7763L23.563 17.5508C23.4887 18.2079 23.3625 18.858 23.1854 19.4951C23.1502 19.6169 23.1081 19.7366 23.0592 19.8535L23.1448 19.6529C23.1173 19.7184 23.0857 19.782 23.0501 19.8434C23.0355 19.8671 23.0186 19.8896 23.0039 19.9133C22.9577 19.9899 23.1719 19.7205 23.1076 19.7792C23.0986 19.787 23.0907 19.7983 23.0817 19.8073C23.0744 19.815 23.0664 19.8222 23.058 19.8287C22.987 19.9054 23.2744 19.6743 23.1944 19.7239C23.1696 19.7397 23.1471 19.7577 23.1211 19.7724C23.0577 19.8081 22.9922 19.8401 22.925 19.8682L23.1257 19.7825C22.4381 20.0699 21.6672 20.1894 20.9368 20.3089C20.6437 20.3574 20.3507 20.4002 20.0565 20.4396L20.2819 20.4092C19.0962 20.5681 17.9037 20.6718 16.709 20.7327C15.4365 20.7981 14.1606 20.815 12.888 20.7552C12.2321 20.7248 11.5761 20.673 10.9246 20.5862L11.15 20.6166C10.3498 20.5039 9.536 20.3585 8.78308 20.0451L8.98484 20.1297C8.85036 20.0742 8.71937 20.0106 8.5926 19.9392C8.53624 19.9076 8.47989 19.875 8.42804 19.84L8.34463 19.7837C8.27926 19.7408 8.55991 19.973 8.47876 19.8851C8.45734 19.8637 8.43706 19.84 8.41677 19.8186C8.62303 20.0361 8.53962 19.9877 8.47989 19.8907C8.434 19.8123 8.39407 19.7306 8.36041 19.6462L8.44833 19.849C8.20036 19.2573 8.08765 18.6024 7.98395 17.9724C7.94488 17.7274 7.90731 17.4825 7.87124 17.2375L7.90168 17.4629C7.71796 16.0935 7.61764 14.7139 7.56354 13.3332C7.50268 11.8983 7.49028 10.4579 7.55678 9.02194C7.58834 8.34567 7.63793 7.66038 7.7281 6.98524L7.69879 7.21066C7.75368 6.66755 7.87442 6.13313 8.05835 5.61917C8.08791 5.51056 8.09566 5.39716 8.08115 5.28554C8.06664 5.17391 8.03016 5.06627 7.97381 4.96882C7.86112 4.7799 7.68048 4.64119 7.46886 4.5811C7.36037 4.55167 7.24711 4.54409 7.13566 4.55879C7.02421 4.5735 6.91679 4.61019 6.81964 4.66676C6.63693 4.78559 6.49925 4.96216 6.42853 5.16832Z"
+                              fill="#F7DC42"
+                            />
+                            <path
+                              d="M15.7127 18.5483C18.5021 18.5483 20.7633 16.2871 20.7633 13.4977C20.7633 10.7083 18.5021 8.44708 15.7127 8.44708C12.9233 8.44708 10.6621 10.7083 10.6621 13.4977C10.6621 16.2871 12.9233 18.5483 15.7127 18.5483Z"
+                              fill="#F7DC42"
+                            />
+                            <path
+                              d="M21.2888 8.44708C21.9904 8.44708 22.5591 7.87836 22.5591 7.17682C22.5591 6.47527 21.9904 5.90656 21.2888 5.90656C20.5873 5.90656 20.0186 6.47527 20.0186 7.17682C20.0186 7.87836 20.5873 8.44708 21.2888 8.44708Z"
+                              fill="#F7DC42"
+                            />
+                            <path
+                              d="M1.94383 2.93101C5.5461 0.0275569 26.2366 -0.133621 29.4117 2.40127C33.2439 5.45801 32.5428 20.4081 29.0736 22.6714C25.8365 24.7836 5.07609 25.2525 2.65391 22.9295C0.0525263 20.4273 -1.39807 5.6237 1.94383 2.93101Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M12.3099 7.07088C15.8674 8.0653 19.3453 9.797 22.2624 11.7376C22.492 11.8912 22.6792 12.0963 22.8077 12.335C22.9362 12.5737 23.0022 12.8388 22.9999 13.1075C22.9977 13.3762 22.9272 13.6403 22.7947 13.877C22.6622 14.1136 22.4716 14.3157 22.2394 14.4658C19.2856 16.3214 16.1027 17.8168 12.764 18.9175C12.5289 18.9917 12.2799 19.0163 12.0339 18.9895C11.788 18.9627 11.5511 18.8852 11.3392 18.7624C11.1274 18.6395 10.9457 18.4742 10.8066 18.2777C10.6675 18.0812 10.5743 17.8581 10.5333 17.6238C10.0293 14.6173 9.88187 11.5657 10.0938 8.52736C10.1135 8.28064 10.1905 8.04131 10.3194 7.82699C10.4482 7.61268 10.6255 7.42886 10.8382 7.28908C11.0508 7.1493 11.2935 7.05713 11.5482 7.01937C11.8029 6.98161 12.0632 6.99921 12.3099 7.07088Z"
+                              fill="#EE2400"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_690_999">
+                              <rect
+                                width="32"
+                                height="23.8543"
+                                fill="white"
+                                transform="translate(0 0.618164)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__item --parking">
+                  <h3 class="h3-font">Parking free</h3>
+                  <div class="img">
+                    <img src="./assets/images/ic_parking.svg" alt="" />
+                  </div>
+                  <div class="text">
+                    <span> Touch me to info </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="foooter__bottom">
+            <p class="b3-font">© 2024 Taco Del Sol</p>
+            <div class="page">
+              <ul>
+                <li>
+                  <a href="" class="b3-font">Privacy policy</a>
+                </li>
+                <li>
+                  <a href="" class="b3-font">General Terms & Conditions</a>
+                </li>
+                <li>
+                  <a href="" class="b3-font">Payment method</a>
+                </li>
+              </ul>
+            </div>
+            <div class="author">
+              <a href="https://alphacreative.vn/" class="b3-font"
+                >Digital Experience by Alpha Creative</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- end header -->
+    <!-- import jquery -->
+    <script src="./assets/libs/jquery-3.7.1.js"></script>
+    <!-- end jquery -->
+    <!-- import gsap -->
+    <script src="./assets/libs/gsap.min.js"></script>
+    <script src="./assets/libs/ScrollTrigger.min.js"></script>
+    <script src="./assets/libs/splitType.min.js"></script>
+    <!-- end import gsap -->
+    <!-- import boostrap -->
+    <script src="./assets/libs/bootstrap.bundle.min.js"></script>
+    <!-- end boostrap -->
+    <!-- import swiper js -->
+    <script src="./assets/libs/swiper-bundle.min.js"></script>
+    <!-- end import swiper js -->
+
+    <!-- import moment js -->
+    <script src="./assets/libs/moment.min.js"></script>
+    <!-- end import moment js -->
+
+    <!-- import lightpick js -->
+    <script src="./assets/libs/lightpick.min.js"></script>
+    <!-- end import lightpick js -->
+    <!-- import custom js -->
+    <script src="./assets/js/script.js"></script>
+    <!-- end import custom js -->
+  </body>
+</html>

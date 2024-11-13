@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Unbounded';
+    src: url('Unbounded-Regular.eot');
+    src: url('Unbounded-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Unbounded-Regular.woff2') format('woff2'),
+        url('Unbounded-Regular.woff') format('woff'),
+        url('Unbounded-Regular.ttf') format('truetype'),
+        url('Unbounded-Regular.svg#Unbounded-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
