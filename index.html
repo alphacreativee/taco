@@ -52,9 +52,10 @@
         >
           <div class="header__left justify-content-start">
             <div class="header__music">
-              <a href="">
+              <a href="#" id="audio-button" title="Pause Music" onclick="togglePlayMusic(event)">
                 <img src="./assets/images/ic_music.svg" alt="" />
               </a>
+              <audio id="player" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"> </audio>
             </div>
           </div>
           <div class="header__center d-flex align-items-center">
@@ -66,11 +67,11 @@
           </div>
           <div class="header__right d-flex justify-content-end">
             <div class="header__phone">
-              <a href="tel:+84 789 92 12 12" class="h3-font"
+              <a href="tel:+84789921212" class="b0-font"
                 >+84 789 92 12 12</a
               >
             </div>
-            <div class="header__lang dropdown-custom">
+            <div class="header__lang dropdown-custom d-none">
               <div class="lang__head dropdown-custom__btn">
                 <div
                   class="value-select dropdown-custom__text h3-font text-center"
@@ -142,7 +143,7 @@
         <div class="leaf--right">
           <img src="./assets/images/leaf-2.png" alt="">
         </div>
-        <div class="intro__container row justify-content-center">
+        <div class="intro__container row justify-content-center align-items-center">
           <div class="intro__container-left col-lg-4 col-6">
             <img src="./assets/images/image-intro.png" alt="">
             <div class="leaf--center">
@@ -150,8 +151,16 @@
             </div>
           </div>
           <div class="intro__container-right col-lg-4 col-6">
-            <h2 class="title h1-font font--primary">Taco Del Sol</h2>
+            <h2 class="title" style="--url : url('../images/stain-1.png')">
+              <span class="h1-font font--primary">Taco Del Sol</span>
+            </h2>
             <div class="desc font-secondary">A story that began in 2020 on the bustling streets of Phu My, where our little taco stand became a nightly gathering place. People lined up, eager to taste our authentic Mexican flavors, made with fresh ingredients and a whole lot of passion.</div>
+          </div>
+        </div>
+        <div class="dish--bottom">
+          <div class="image--large">
+            <img src="./assets/images/intro_asset_2.png" alt="">
+            <img src="./assets//images/intro_asset_1.png" class="image--guitar" alt="">
           </div>
         </div>
       </div>
@@ -160,15 +169,20 @@
 
       <!-- section menu -->
        <section class="section-menu" style="background-image: url('./assets/images/bg-menu-section.png');">
+        <div class="dish--one">
+          <img src="./assets/images/menu-dishes-1.png" alt="">
+        </div>
         <div class="container-fluid">
           <div class="menu__container row align-items-center">
             <div class="col-2"></div>
             <div class="col-4 menu__container-content">
-              <h2 class="title h1-font">Menu</h2>
+              <h2 class="title " style="--url: url('../images/stain-2.png');">
+                <span class="h1-font">Menu</span>
+              </h2>
               <div class="desc">
                 At Taco del Sol, we’re passionate about bringing the vibrant flavors of Mexico to Saigon, but with a unique twist. We’ve taken the classics you love: tacos, burritos, quesadillas, and ceviche and infused them with the freshest Vietnamese ingredients, creating a culinary fusion that’s both familiar and exciting.
               </div>
-              <div class="button-wrapper d-flex align-items-center justify-content-center">
+              <div class="button-wrapper d-flex align-items-center justify-content-start">
                 <a href="#" title="Book a table" class="text-uppercase btn-custom btn--primary button-wrapper__item">
                   <span class="h4-font">Book a table</span>
                 </a>
@@ -180,6 +194,14 @@
             <div class="col-1"></div>
             <div class="col-4 menu__container-img">
               <img src="./assets/images/image-menu-section.png" alt="">
+
+              <div class="dish--two">
+                <img src="./assets/images/menu-dishes-3.png" alt="">
+              </div>
+
+              <div class="dish--three">
+                <img src="./assets/images/menu-dishes-2.png" alt="">
+              </div>
             </div>
             <div class="col-1"></div>
           </div>
@@ -191,7 +213,7 @@
       <section class="events-sec" style="background-image: url(./assets/images/bg-image-event.png);">
         <div class="container-fluid p-0">
           <div class="events__container">
-            <div class="events__title h1-font">EVENTS & PROMOTION</div>
+            <div class="events__title h1-font">Events & Promotions</div>
             <div class="events__list">
               <div class="events__item">
                 <div class="events__img">
@@ -204,9 +226,9 @@
                   <div class="rank h1-font">#<span>1</span></div>
                   <div class="detail">
                     <h3 class="h2-font" style="--color-text: #ee2400">
-                      LADIES’ NIGHT: FREE DRINK FOR LADIES TONIGHT!
+                      Margarita Hour
                     </h3>
-                    <div class="desc b2-font">Wed, 18 Sep</div>
+                    <div class="desc b1-font">Wed, 18 Sep</div>
                   </div>
                 </div>
               </div>
@@ -221,9 +243,9 @@
                   <div class="rank h1-font">#<span>2</span></div>
                   <div class="detail">
                     <h3 class="h2-font" style="--color-text: #feb503">
-                      LADIES’ NIGHT: FREE DRINK FOR LADIES TONIGHT!
+                      Taco Hour
                     </h3>
-                    <div class="desc b2-font">Wed, 18 Sep</div>
+                    <div class="desc b1-font">Wed, 18 Sep</div>
                   </div>
                 </div>
               </div>
@@ -238,9 +260,9 @@
                   <div class="rank h1-font">#<span>3</span></div>
                   <div class="detail">
                     <h3 class="h2-font" style="--color-text: #108a00">
-                      Celebrate Mexican Night with Us!
+                      Taco tuesday
                     </h3>
-                    <div class="desc b2-font">
+                    <div class="desc b1-font">
                       Just 499k within a 2 hour unlimited dining experience!
                     </div>
                   </div>
@@ -257,9 +279,9 @@
                   <div class="rank h1-font">#<span>5</span></div>
                   <div class="detail">
                     <h3 class="h2-font" style="--color-text: #feb503">
-                      LADIES’ NIGHT: FREE DRINK FOR LADIES TONIGHT!
+                      Ladies night
                     </h3>
-                    <div class="desc b2-font">Wed, 18 Sep</div>
+                    <div class="desc b1-font">Wed, 18 Sep</div>
                   </div>
                 </div>
               </div>
@@ -410,8 +432,8 @@
                   <div class="img">
                     <img src="./assets/images/ic_fl.svg" alt="" />
                   </div>
-                  <h1>FOLLOW <br />US ON</h1>
-                  <a href="" class="b1-font">#tacodelsol.vn</a>
+                  <div class="title"><span style="color: #D71919;">FOLLOW</span> <br /><span style="color: #108A00;">US ON</span></div>
+                  <a href="" class="b2-font">#tacodelsol.vn</a>
                 </div>
               </div>
               <!-- có option video mp4 hoặc nhập hình -->
@@ -540,33 +562,33 @@
             <div class="footer__content">
               <div class="footer__list">
                 <div class="footer__item --address">
-                  <h3 class="h3-font">ADDRESS</h3>
+                  <h3 class="b0-font">ADDRESS</h3>
                   <p class="address b1-font">
                     4-5 Floor, 110-112 Ly Tu Trong Street, Ben Thanh Ward,
                     District 1, Ho Chi Minh City
                   </p>
                 </div>
                 <div class="footer__item --time">
-                  <h3 class="h3-font">OPENING TIME</h3>
+                  <h3 class="b0-font">OPENING TIME</h3>
                   <ul>
                     <li class="b1-font">Lunch: 11.30 am - 3 pm</li>
                     <li class="b1-font">Dinner: 5.30 pm - 11 pm</li>
                   </ul>
                 </div>
                 <div class="footer__item --map">
-                  <h3 class="h3-font">MAP</h3>
+                  <h3 class="b0-font">MAP</h3>
                   <div class="img">
                     <img src="./assets/images/ic_map.svg" alt="" />
                   </div>
                 </div>
                 <div class="footer__item --call">
-                  <h3 class="h3-font">CONTACT US</h3>
+                  <h3 class="b0-font">CONTACT US</h3>
                   <a href="tel:+84 789 92 12 12" class="b1-font"
                     >+84 789 92 12 12</a
                   >
                 </div>
                 <div class="footer__item --social">
-                  <h3 class="h3-font">FOLLOW US</h3>
+                  <h3 class="b0-font">FOLLOW US</h3>
                   <ul>
                     <li>
                       <a href=""
@@ -718,7 +740,7 @@
                   </ul>
                 </div>
                 <div class="footer__item --parking">
-                  <h3 class="h3-font">PARKING</h3>
+                  <h3 class="b0-font">PARKING</h3>
                   <div class="img">
                     <img src="./assets/images/ic_parking.svg" alt="" />
                   </div>
@@ -730,9 +752,9 @@
             </div>
           </div>
           <div class="footer__bottom">
-            <p class="b3-font">© 2024 Taco Del Sol</p>
+            <p class="b2-font">© 2024 Taco Del Sol</p>
             <div class="author">
-              <a href="https://alphacreative.vn/" class="b3-font"
+              <a href="https://alphacreative.vn/" class="b2-font"
                 >Digital Experience by Alpha Creative</a
               >
             </div>

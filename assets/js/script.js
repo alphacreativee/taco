@@ -11,10 +11,10 @@ $(document).ready(function () {
 function intro(callback) {
   if ($(".intro").length) {
     const $intro = $(".intro");
-    $("body").addClass("overflow-hidden");
-    setTimeout(function () {
-      $("body").removeClass("overflow-hidden");
-    }, 3000);
+    // $("body").addClass("overflow-hidden");
+    // setTimeout(function () {
+    //   $("body").removeClass("overflow-hidden");
+    // }, 3000);
 
     const tl = gsap.timeline({
       onComplete: () => {
@@ -244,3 +244,19 @@ function magicCursor() {
 //     });
 //   }
 // }
+
+function togglePlayMusic(event){
+  event.preventDefault();
+
+  const thisTarget = $(event.currentTarget);
+  thisTarget.toggleClass("pause");
+  const audio = $("#player")[0];
+  
+  if (audio.paused) {
+    audio.play();
+    thisTarget.attr("title", "Pause Music");
+  } else {
+    audio.pause();
+    thisTarget.attr("title", "Play Music");
+  }
+}
