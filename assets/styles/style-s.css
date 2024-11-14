@@ -1,0 +1,51 @@
+.book-table-sec {
+  padding-top: 130px;
+}
+.book-table-sec .form-book {
+  background-image: url(../images/bg_modal.png);
+  background-color: transparent;
+  border: none;
+  background-size: 100% 100%;
+  padding: 45px 28px;
+  position: relative;
+}
+.book-table-sec .book-table .group-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.book-table-sec .book-table .form-control {
+  padding: 12px 16px;
+  background-image: url(../images/input_border.png);
+  background-size: 100% 100%;
+  border: none;
+}
+.book-table-sec .remarks textarea {
+  background-image: url(../images/textarea_border.png);
+  background-size: 100% 100%;
+  border: none;
+  width: 100%;
+  padding: 28px 16px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-fourth);
+  resize: none;
+}
+.book-table-sec .book-table .view,
+.book-table-sec .book-table .name-booking,
+.book-table-sec .book-table .phone,
+.book-table-sec .book-table .anniversary {
+  margin-bottom: 16px;
+}
+.book-table-sec .form-book-footer {
+  margin-top: -32px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.book-table-sec .form-book-footer button {
+  transform: translateY(40px);
+}
