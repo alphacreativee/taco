@@ -25,6 +25,9 @@
     <!-- import font -->
     <link rel="stylesheet" href="./assets/font/unbounded/font.css" />
     <link rel="stylesheet" href="./assets/font/bringhum/font.css" />
+
+    <link rel="stylesheet" href="./assets/font/catalish/stylesheet.css">
+    <link rel="stylesheet" href="./assets/font/hermeneus/stylesheet.css">
     <!-- end import font -->
     <!-- import link custom css page -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
@@ -32,7 +35,7 @@
   </head>
   <body>
     <div
-      class="intro position-fixed d-flex align-items-center justify-content-center"
+      class="intro position-fixed d-flex align-items-center justify-content-center d-none"
     >
       <div class="intro-inner">
         <img src="./assets/images/intro_1.png" alt="" />
@@ -55,30 +58,10 @@
             </div>
           </div>
           <div class="header__center d-flex align-items-center">
-            <div class="header__menu --left">
-              <ul>
-                <li>
-                  <a href="./index.html" class="h3-font">HOME</a>
-                </li>
-                <li>
-                  <a href="" class="h3-font">ABOUT</a>
-                </li>
-              </ul>
-            </div>
             <div class="header__logo">
               <a href="" class="logo">
                 <img src="./assets/images/logo_full.svg" alt="" />
               </a>
-            </div>
-            <div class="header__menu --right">
-              <ul>
-                <li>
-                  <a href="" class="h3-font">MENU</a>
-                </li>
-                <li>
-                  <a href="./offer.html" class="h3-font">OFFERS</a>
-                </li>
-              </ul>
             </div>
           </div>
           <div class="header__right d-flex justify-content-end">
@@ -128,133 +111,84 @@
         <div class="container-fluid p-0">
           <div class="hero-banner__container">
             <!-- video or image -->
-            <!-- <img src="./assets/images/img_banner.png" alt="" /> -->
-            <video muted autoplay id="video-banner">
+            <img src="./assets/images/image-banner.jpg" alt="" />
+            <!-- <video muted autoplay id="video-banner">
               <source
                 src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
                 type="video/mp4"
               />
-            </video>
-          </div>
-        </div>
-      </section>
-      <div class="banner"></div>
-      <!-- start introduce sec -->
-      <section class="introduce-sec">
-        <div class="container-fluid p-0">
-          <div class="introduce__container text-center">
-            <div class="introduce__left">
-              <div class="box-img">
-                <img src="./assets/images/img_1.png" alt="" />
-              </div>
-            </div>
-            <div
-              class="introduce__title text-random d-flex justify-content-center align-items-center"
-            >
-              <h1>
-                TACO <br />
-                DESOL
-              </h1>
-              <div class="introduce__bg">
-                <img src="./assets/images/ic_intro.svg" alt="" />
-              </div>
-            </div>
-            <div class="introduce__right">
-              <div class="box-img">
-                <img
-                  src="https://images.unsplash.com/photo-1505533321630-975218a5f66f?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- end introduce sec -->
-      <div class="spacing"></div>
-      <!-- start restaurant sec -->
-      <section class="restaurant-sec">
-        <div class="container-fluid p-0">
-          <div class="restaurant__container">
-            <div class="restaurant__top d-flex justify-content-center">
-              <div class="restaurant__box">
-                <div class="restaurant__title text-random">
-                  <h1>
-                    isn't just <br />
-                    a restaurant,<br />
-                    it's a story.
-                  </h1>
-                </div>
-                <div class="restaurant__desc">
-                  <p class="b1-font text-center">
-                    A story that began in 2020 on the bustling streets of Phu
-                    My, where our little taco stand became a nightly gathering
-                    place. People lined up, eager to taste our authentic Mexican
-                    flavors, made with fresh ingredients and a whole lot of
-                    passion.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="restaurant__bottom">
-              <div class="restaurant__box">
-                <div class="text-random">
-                  <h1>
-                    MUSHROOM <br />
-                    PIPIL
-                  </h1>
-                </div>
-                <div class="restaurant__btn">
-                  <a href="" class="h4-font">
-                    <span class="h4-font">VIEW ALL</span>
-                  </a>
-                </div>
-              </div>
-              <div class="restaurant__list">
-                <ul>
-                  <!-- list món ăn -->
-                  <li>
-                    <img src="./assets/images/cake_1.png.png" alt="" />
-                    <div class="hover-me one">
-                      <img src="./assets/images/img_hover_me_1.svg" alt="" />
-                    </div>
-                  </li>
-                  <li>
-                    <img src="./assets/images/cake_2.png.png" alt="" />
-                  </li>
-                  <li>
-                    <img src="./assets/images/cake_3.png.png" alt="" />
-                  </li>
+            </video> -->
 
-                  <li>
-                    <img src="./assets/images/cake_1.png.png" alt="" />
-                    <div class="hover-me two">
-                      <img src="./assets/images/img_hover_me_2.svg" alt="" />
-                    </div>
-                  </li>
-                  <li>
-                    <img src="./assets/images/cake_2.png.png" alt="" />
-                  </li>
-                  <li>
-                    <img src="./assets/images/cake_3.png.png" alt="" />
-                  </li>
-                  <!-- end list món ăn -->
-                  <!-- img arrow -->
-
-                  <!-- <li class="hover-me two">
-                    <img src="./assets/images/img_hover_me_2.svg" alt="" />
-                  </li> -->
-                  <!-- end img arrow -->
-                </ul>
+            <div class="hero-banner__content">
+              <h1 class="h1-font title text-center">Feed me Tacos and pour me a Tequila</h1>
+              <div class="button-wrapper d-flex align-items-center justify-content-center">
+                <a href="#" title="Book a table" class="text-uppercase btn-custom btn--primary button-wrapper__item">
+                  <span class="h4-font">Book a table</span>
+                </a>
+                <a href="#" title="Delivery" class="text-uppercase btn-custom btn--secondary button-wrapper__item">
+                  <span class="h4-font">Delivery</span>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- end restaurant sec -->
+      <!-- section introduce -->
+      <section class="section-intro" style="background-image: url('./assets/images/bg-intro-section.png');">
+      <div class="container-fluid">
+        <div class="leaf--left">
+          <img src="./assets/images/leaf-1.png" alt="">
+        </div>
+        <div class="leaf--right">
+          <img src="./assets/images/leaf-2.png" alt="">
+        </div>
+        <div class="intro__container row justify-content-center">
+          <div class="intro__container-left col-lg-4 col-6">
+            <img src="./assets/images/image-intro.png" alt="">
+            <div class="leaf--center">
+              <img src="./assets/images/leaf-3.png" alt="">
+            </div>
+          </div>
+          <div class="intro__container-right col-lg-4 col-6">
+            <h2 class="title h1-font font--primary">Taco Del Sol</h2>
+            <div class="desc font-secondary">A story that began in 2020 on the bustling streets of Phu My, where our little taco stand became a nightly gathering place. People lined up, eager to taste our authentic Mexican flavors, made with fresh ingredients and a whole lot of passion.</div>
+          </div>
+        </div>
+      </div>
+      </section>
+      <!-- end section introduce -->
+
+      <!-- section menu -->
+       <section class="section-menu" style="background-image: url('./assets/images/bg-menu-section.png');">
+        <div class="container-fluid">
+          <div class="menu__container row align-items-center">
+            <div class="col-2"></div>
+            <div class="col-4 menu__container-content">
+              <h2 class="title h1-font">Menu</h2>
+              <div class="desc">
+                At Taco del Sol, we’re passionate about bringing the vibrant flavors of Mexico to Saigon, but with a unique twist. We’ve taken the classics you love: tacos, burritos, quesadillas, and ceviche and infused them with the freshest Vietnamese ingredients, creating a culinary fusion that’s both familiar and exciting.
+              </div>
+              <div class="button-wrapper d-flex align-items-center justify-content-center">
+                <a href="#" title="Book a table" class="text-uppercase btn-custom btn--primary button-wrapper__item">
+                  <span class="h4-font">Book a table</span>
+                </a>
+                <a href="#" title="Delivery" class="text-uppercase btn-custom btn--secondary button-wrapper__item">
+                  <span class="h4-font">Delivery</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-4 menu__container-img">
+              <img src="./assets/images/image-menu-section.png" alt="">
+            </div>
+            <div class="col-1"></div>
+          </div>
+        </div>
+       </section>
+      <!-- end section menu -->
 
       <!-- start event-sec -->
-      <section class="events-sec">
+      <section class="events-sec" style="background-image: url(./assets/images/bg-image-event.png);">
         <div class="container-fluid p-0">
           <div class="events__container">
             <div class="events__title h1-font">EVENTS & PROMOTION</div>
@@ -463,270 +397,138 @@
         </div>
       </section>
       <!-- end event-sec -->
-      <div class="spacing"></div>
-      <!-- start offer sec -->
-      <!-- <section class="offers-sec">
-        <div class="container-fluid p-0">
-          <div class="offers__container">
-            <div class="offers__title h1-font">offers</div>
-            <div class="offers__list">
-              <div class="swiper swiper-offer">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div
-                      class="offers__item"
-                      style="
-                        --art-work: url('../images/art_1.png');
-                        --color-text: #feb503;
-                      "
-                    >
-                      <div class="offers__img">
-                        <img
-                          src="https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          alt=""
-                        />
-                      </div>
-                      <div class="offers__content">
-                        <div class="detail">
-                          <h3 class="h2-font">BUY 3 MARGARITA, GET 1 FREE</h3>
-                          <div class="desc b2-font">
-                            Introducing an exciting NEW SPECIAL to our menu. To
-                            celebrate this epic.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div
-                      class="offers__item"
-                      style="
-                        --art-work: url('../images/art_1.png');
-                        --color-text: #45fb4b;
-                      "
-                    >
-                      <div class="offers__img">
-                        <img
-                          src="https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          alt=""
-                        />
-                      </div>
-                      <div class="offers__content">
-                        <div class="detail">
-                          <h3 class="h2-font">BUY 3 MARGARITA, GET 1 FREE</h3>
-                          <div class="desc b2-font">
-                            Introducing an exciting NEW SPECIAL to our menu. To
-                            celebrate this epic.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div
-                      class="offers__item"
-                      style="
-                        --art-work: url('../images/art_1.png');
-                        --color-text: #feb503;
-                      "
-                    >
-                      <div class="offers__img">
-                        <img
-                          src="https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          alt=""
-                        />
-                      </div>
-                      <div class="offers__content">
-                        <div class="detail">
-                          <h3 class="h2-font">BUY 3 MARGARITA, GET 1 FREE</h3>
-                          <div class="desc b2-font">
-                            Introducing an exciting NEW SPECIAL to our menu. To
-                            celebrate this epic.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div
-                      class="offers__item"
-                      style="
-                        --art-work: url('../images/art_1.png');
-                        --color-text: #45fb4b;
-                      "
-                    >
-                      <div class="offers__img">
-                        <img
-                          src="https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                          alt=""
-                        />
-                      </div>
-                      <div class="offers__content">
-                        <div class="detail">
-                          <h3 class="h2-font">BUY 3 MARGARITA, GET 1 FREE</h3>
-                          <div class="desc b2-font">
-                            Introducing an exciting NEW SPECIAL to our menu. To
-                            celebrate this epic.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-arrows">
-                <div class="swiper-button-prev d-none">
-                  <img src="./assets/images/ic_arrow_prev.svg" alt="" />
-                </div>
-                <div class="swiper-button-next">
-                  <img src="./assets/images/ic_arrow_next.svg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="restaurant__btn offers__btn">
-              <a href="javascript:void(0);" class="h4-font">
-                <span class="h4-font">VIEW ALL</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- end offer sec -->
-      <div class="spacing"></div>
-      <!-- start follow sec -->
-
-      <div class="about-follow follow-us home">
-        <div class="container-fluid p-0">
-          <div class="follow__container">
-            <div class="follow-title">
-              <div class="box">
-                <div class="img">
-                  <img src="./assets/images/ic_fl.svg" alt="" />
-                </div>
-                <h1>FOLLOW <br />US ON</h1>
-                <a href="" class="b1-font">#tacodelsol.vn</a>
-              </div>
-            </div>
-            <!-- có option video mp4 hoặc nhập hình -->
-            <div class="follow-list">
-              <div class="item">
-                <div class="box">
-                  <video autoplay muted>
-                    <source
-                      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                      type="video/mp4"
-                    />
-                  </video>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <img
-                    src="./assets/images/fl_1.png"
-                    alt=""
-                    class="img-default"
-                  />
-                  <img
-                    src="./assets/images/fl_2.png"
-                    alt=""
-                    class="img-hover"
-                  />
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <img
-                    src="./assets/images/fl_1.png"
-                    alt=""
-                    class="img-default"
-                  />
-                  <img
-                    src="./assets/images/fl_2.png"
-                    alt=""
-                    class="img-hover"
-                  />
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <img
-                    src="./assets/images/fl_1.png"
-                    alt=""
-                    class="img-default"
-                  />
-                  <img
-                    src="./assets/images/fl_2.png"
-                    alt=""
-                    class="img-hover"
-                  />
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <img
-                    src="./assets/images/fl_1.png"
-                    alt=""
-                    class="img-default"
-                  />
-                  <img
-                    src="./assets/images/fl_2.png"
-                    alt=""
-                    class="img-hover"
-                  />
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <img
-                    src="./assets/images/fl_1.png"
-                    alt=""
-                    class="img-default"
-                  />
-                  <img
-                    src="./assets/images/fl_2.png"
-                    alt=""
-                    class="img-hover"
-                  />
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <img
-                    src="./assets/images/fl_1.png"
-                    alt=""
-                    class="img-default"
-                  />
-                  <img
-                    src="./assets/images/fl_2.png"
-                    alt=""
-                    class="img-hover"
-                  />
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <img
-                    src="./assets/images/fl_1.png"
-                    alt=""
-                    class="img-default"
-                  />
-                  <img
-                    src="./assets/images/fl_2.png"
-                    alt=""
-                    class="img-hover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end follow sec -->
     </main>
-    <div class="spacing"></div>
     <!-- start footer -->
-    <footer class="footer">
+    <footer class="footer" style="background-image: url('./assets/images/bg-footer.png');">
       <div class="container-fluid p-0">
+        <!-- start follow sec -->
+        <div class="about-follow follow-us home">
+          <div class="container-fluid p-0">
+            <div class="follow__container">
+              <div class="follow-title">
+                <div class="box">
+                  <div class="img">
+                    <img src="./assets/images/ic_fl.svg" alt="" />
+                  </div>
+                  <h1>FOLLOW <br />US ON</h1>
+                  <a href="" class="b1-font">#tacodelsol.vn</a>
+                </div>
+              </div>
+              <!-- có option video mp4 hoặc nhập hình -->
+              <div class="follow-list">
+                <!-- <div class="item">
+                  <div class="box">
+                    <video autoplay muted>
+                      <source
+                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div> -->
+                <div class="item">
+                  <div class="box">
+                    <img
+                      src="./assets/images/fl_1.png"
+                      alt=""
+                      class="img-default"
+                    />
+                    <img
+                      src="./assets/images/fl_2.png"
+                      alt=""
+                      class="img-hover"
+                    />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="box">
+                    <img
+                      src="./assets/images/fl_1.png"
+                      alt=""
+                      class="img-default"
+                    />
+                    <img
+                      src="./assets/images/fl_2.png"
+                      alt=""
+                      class="img-hover"
+                    />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="box">
+                    <img
+                      src="./assets/images/fl_1.png"
+                      alt=""
+                      class="img-default"
+                    />
+                    <img
+                      src="./assets/images/fl_2.png"
+                      alt=""
+                      class="img-hover"
+                    />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="box">
+                    <img
+                      src="./assets/images/fl_1.png"
+                      alt=""
+                      class="img-default"
+                    />
+                    <img
+                      src="./assets/images/fl_2.png"
+                      alt=""
+                      class="img-hover"
+                    />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="box">
+                    <img
+                      src="./assets/images/fl_1.png"
+                      alt=""
+                      class="img-default"
+                    />
+                    <img
+                      src="./assets/images/fl_2.png"
+                      alt=""
+                      class="img-hover"
+                    />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="box">
+                    <img
+                      src="./assets/images/fl_1.png"
+                      alt=""
+                      class="img-default"
+                    />
+                    <img
+                      src="./assets/images/fl_2.png"
+                      alt=""
+                      class="img-hover"
+                    />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="box">
+                    <img
+                      src="./assets/images/fl_1.png"
+                      alt=""
+                      class="img-default"
+                    />
+                    <img
+                      src="./assets/images/fl_2.png"
+                      alt=""
+                      class="img-hover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end follow sec -->
         <div class="footer__container">
           <div class="footer__top">
             <div class="footer_chair">
@@ -738,33 +540,33 @@
             <div class="footer__content">
               <div class="footer__list">
                 <div class="footer__item --address">
-                  <h3 class="h3-font">TACO DEL SOL</h3>
+                  <h3 class="h3-font">ADDRESS</h3>
                   <p class="address b1-font">
                     4-5 Floor, 110-112 Ly Tu Trong Street, Ben Thanh Ward,
                     District 1, Ho Chi Minh City
                   </p>
                 </div>
                 <div class="footer__item --time">
-                  <h3 class="h3-font">COME TO ME</h3>
+                  <h3 class="h3-font">OPENING TIME</h3>
                   <ul>
                     <li class="b1-font">Lunch: 11.30 am - 3 pm</li>
                     <li class="b1-font">Dinner: 5.30 pm - 11 pm</li>
                   </ul>
                 </div>
                 <div class="footer__item --map">
-                  <h3 class="h3-font">Destination on map</h3>
+                  <h3 class="h3-font">MAP</h3>
                   <div class="img">
                     <img src="./assets/images/ic_map.svg" alt="" />
                   </div>
                 </div>
                 <div class="footer__item --call">
-                  <h3 class="h3-font">CALL ME BABE!</h3>
+                  <h3 class="h3-font">CONTACT US</h3>
                   <a href="tel:+84 789 92 12 12" class="b1-font"
                     >+84 789 92 12 12</a
                   >
                 </div>
                 <div class="footer__item --social">
-                  <h3 class="h3-font">Don't forget me!</h3>
+                  <h3 class="h3-font">FOLLOW US</h3>
                   <ul>
                     <li>
                       <a href=""
@@ -916,7 +718,7 @@
                   </ul>
                 </div>
                 <div class="footer__item --parking">
-                  <h3 class="h3-font">Parking free</h3>
+                  <h3 class="h3-font">PARKING</h3>
                   <div class="img">
                     <img src="./assets/images/ic_parking.svg" alt="" />
                   </div>
@@ -927,21 +729,8 @@
               </div>
             </div>
           </div>
-          <div class="foooter__bottom">
+          <div class="footer__bottom">
             <p class="b3-font">© 2024 Taco Del Sol</p>
-            <div class="page">
-              <ul>
-                <li>
-                  <a href="" class="b3-font">Privacy policy</a>
-                </li>
-                <li>
-                  <a href="" class="b3-font">General Terms & Conditions</a>
-                </li>
-                <li>
-                  <a href="" class="b3-font">Payment method</a>
-                </li>
-              </ul>
-            </div>
             <div class="author">
               <a href="https://alphacreative.vn/" class="b3-font"
                 >Digital Experience by Alpha Creative</a

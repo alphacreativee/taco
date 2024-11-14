@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'HermeneusOne';
+    src: url('HermeneusOne-Regular.eot');
+    src: url('HermeneusOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('HermeneusOne-Regular.woff2') format('woff2'),
+        url('HermeneusOne-Regular.woff') format('woff'),
+        url('HermeneusOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

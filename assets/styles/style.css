@@ -1,12 +1,13 @@
 :root {
-  --color-primary: #feb503;
-  --color-secondary: #ee2400;
+  --color-primary: #FFC95B;
+  --color-secondary: #D71919;
   --color-third: #108a00;
-  --color-fourth: #030303;
+  --color-fourth: #25BCC0;
+  --color-fifth: #030303;
   --color-white: #fff;
 
-  --font-primary: "Bringhum";
-  --font-secondary: "Unbounded";
+  --font-primary: "Catalish Huntera";
+  --font-secondary: "HermeneusOne";
   /* 24 40 56 */
   /* https://bavet.eu/ */
 }
@@ -64,6 +65,10 @@ body {
   overflow-x: hidden;
   background-image: url("../images/img_body_bg.png");
   background-size: 100% 100%;
+  scroll-behavior: smooth;
+}
+main{
+  overflow-x: hidden;
 }
 body.page-offers-detail,
 body.page-offers {
@@ -97,8 +102,8 @@ input[type="number"] {
 /* set minxin */
 .h1-font {
   font-family: var(--font-primary);
-  font-size: 64px;
-  line-height: 64px;
+  font-size: 40px;
+  line-height: 48px;
 }
 .h2-font {
   font-family: var(--font-primary);
@@ -132,6 +137,44 @@ input[type="number"] {
 }
 .spacing {
   height: 120px;
+}
+.btn-custom {
+  min-width: 146px;
+  height: 52px;
+  width: 100%;
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  mask-image: url("../images/bg_button_v2.svg");
+  transition: background-color 0.4s ease;
+}
+.btn-custom span{
+  transition: color 0.4s ease;
+}
+.btn-custom.btn--secondary{
+  background-color: var(--color-primary);
+}
+.btn-custom.btn--primary:hover {
+  background-color: var(--color-primary);
+}
+.btn-custom.btn--primary:hover span{
+  color: var(--color-secondary);
+}
+.btn-custom.btn--secondary:hover {
+  background-color: var(--color-secondary);
+}
+.btn-custom.btn--secondary:hover span{
+  color: var(--color-white);
+}
+.btn-custom span {
+  color: var(--color-white);
+  transform: translateY(3px);
+  text-transform: uppercase;
+}
+.btn-custom.btn--secondary span{
+  color: var(--color-secondary);
 }
 /* end set minxin */
 /* css intro */
@@ -199,12 +242,11 @@ input[type="number"] {
   background-image: url("../images/bg_header.png");
   background-size: 100% 100%;
 }
-.header__left,
-.header__right {
-  width: 200px;
-}
 .header__center {
-  gap: 56px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 .header__menu ul {
   display: flex;
@@ -221,7 +263,7 @@ input[type="number"] {
   gap: 24px;
 }
 .header__phone a {
-  color: var(--color-third);
+  color: var(--color-primary);
   transition: color 0.3s ease;
 }
 .header__phone a:hover {
@@ -246,6 +288,7 @@ input[type="number"] {
 }
 .lang__head .value-select {
   width: 24px;
+  color: var(--color-fourth);
 }
 
 /* end css header */
@@ -305,6 +348,36 @@ input[type="number"] {
 .hero-banner__container {
   width: 100%;
   height: 100vh;
+  position: relative;
+}
+.hero-banner__container::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.hero-banner__content .button-wrapper{
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-top: 54px;
+  gap: 12px;
+}
+.hero-banner__content{
+  position: absolute;
+  top: calc(50% + 80px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  z-index: 2;
+}
+.hero-banner__content .title{
+  color: var(--color-white);
+}
+.hero-banner__content .button-wrapper__item{
+  width: max-content;
+  max-width: 100%;
 }
 .hero-banner__container video {
   width: 100%;
@@ -317,6 +390,82 @@ input[type="number"] {
   object-fit: cover;
 }
 /* end banner */
+
+/* section intro */
+.section-intro{
+  padding: 90px 0 70px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: left;
+  position: relative;
+  z-index: 2;
+}
+.section-intro .leaf--left{
+  position: absolute;
+  z-index: 1;
+  top: -40px;
+  left: -70px;
+}
+.section-intro .leaf--left img,
+.section-intro .leaf--right img{
+  width: 310px;
+  height: 210px;
+}
+.section-intro .leaf--center img{
+  width: 270px;
+  height: 180px;
+}
+.section-intro .leaf--right{
+  position: absolute;
+  top: -40px;
+  right: -80px;
+}
+.section-intro .leaf--center{
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  transform: translateX(50%);
+}
+.intro__container-left{
+  width: 30%;
+  position: relative;
+}
+.intro__container-right{
+  margin-left: 140px;
+}
+.intro__container-right .title{
+  position: relative;
+}
+.intro__container-right .desc{
+  margin-top: 54px;
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--color-fifth);
+}
+/* end section intro */
+/* section menu */
+.section-menu{
+  padding: 80px 0 60px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 100% 100%;
+}
+.section-menu .desc{
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--color-white);
+  font-family: var(--font-secondary);
+  margin-top: 64px;
+}
+.section-menu .button-wrapper{
+  margin-top: 56px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* end section menu */
 
 .introduce-sec {
   overflow: hidden;
@@ -535,6 +684,11 @@ input[type="number"] {
 /* end style restaurant sec */
 
 /* start style events */
+.events-sec{
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
 .events__container {
   padding-inline: 24px;
 }
@@ -863,7 +1017,6 @@ input[type="number"] {
 .footer__container {
   padding-inline: 60px;
   padding-top: 64px;
-  background-color: #25bcc0;
 }
 .footer__top {
   display: flex;
@@ -1011,24 +1164,30 @@ input[type="number"] {
   display: block;
   transform: rotate(-7.62deg);
 }
-.foooter__bottom {
-  display: grid;
-  grid-template-columns: 3fr 4fr 3fr;
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 24px 40px;
 }
-.foooter__bottom .page ul {
+.footer__bottom .page ul {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-.foooter__bottom .page ul li a {
+.footer__bottom .page ul li a {
   color: var(--color-fourth);
 }
-.foooter__bottom .author {
+.footer__bottom .author {
   text-align: right;
 }
-.foooter__bottom .author a {
-  color: var(--color-fourth);
+.footer__bottom .author a {
+  color: var(--color-fifth);
+}
+footer{
+  background-repeat: no-repeat;
+  background-size: 120% 100%;
+  background-position: center;
 }
 /* end css footer */
 
@@ -1543,6 +1702,7 @@ input[type="number"] {
 /* css follow us */
 .follow-us {
   overflow: hidden;
+  padding: 100px 0;
 }
 .follow__container .follow-title {
   transform: rotate(-8deg);

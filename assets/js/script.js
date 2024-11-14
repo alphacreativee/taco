@@ -69,9 +69,7 @@ function header() {
         // self.refresh();
         if (self.direction === -1) {
           $(".header__sub-menu");
-          console.log("scroll lên");
         } else {
-          console.log("scroll xuống");
         }
       },
     });

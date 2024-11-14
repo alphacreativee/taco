@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Catalish Huntera';
+    src: url('CatalishHuntera.woff2') format('woff2'),
+         url('CatalishHuntera.woff') format('woff'),
+         url('CatalishHuntera.ttf') format('truetype'),
+         url('CatalishHuntera.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
