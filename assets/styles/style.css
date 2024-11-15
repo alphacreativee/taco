@@ -1236,7 +1236,7 @@ input[type="number"] {
 .modal-cart .minicart-popup-wrapper {
   width: 465px;
   height: 575px;
-  background-color: #f9f9f9;
+  background-color: var(--color-fifth);
   mask-image: url("../images/bg_modal.png");
   mask-size: 100% 100%;
   overflow-y: scroll;
@@ -1279,13 +1279,13 @@ input[type="number"] {
   transform: translateX(-86px) !important;
 }
 .custom-modal {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--color-white);
 }
 .minicart-popup-wrapper .item-added-to-cart-image {
-  background-image: var(--bg-add-to-cart);
   background-position: center;
   width: 80px;
   height: 80px;
+  min-width: 80px;
 }
 .minicart-popup-body {
   padding: 20px 28px 20px;
@@ -1311,31 +1311,52 @@ input[type="number"] {
   justify-content: space-between;
   padding-bottom: 12px;
   padding-top: 12px;
-  border-bottom: 1px solid rgba(3, 3, 3, 0.3);
+  border-bottom: 1px solid var(--color-white);
 }
 .minicart-popup-item:last-child {
   border: none;
 }
 .item-added-to-cart-name {
-  color: var(--color-third);
+  color: var(--item-color);
   margin-bottom: 4px;
+}
+.item-added-to-cart-price{
+  color: var(--item-color);
 }
 .minicart-popup-quanlity {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 16px;
+  min-width: 78px;
+}
+.minicart-popup-quanlity .minus{
+  width: 14px;
+}
+.minicart-popup-quanlity .plus{
+  width: 12px;
+}
+.minicart-popup-quanlity p{
+  font-size: 22px;
+  line-height: 32px;
+  color: var(--color-white);
+  font-family: var(--font-secondary);
 }
 .minicart-popup-footer {
   padding: 26px 28px 32px;
-  border-top: 1px solid var(--color-fourth);
+  border-top: 1px solid #F4F1EA;
   position: sticky;
   bottom: 0;
-  background-color: var(--color-white);
+  background-color: var(--color-fifth);
 }
 
 .minicart-popup-footer .minicart-popup-subtotal {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.minicart-popup-footer .minicart-popup-subtotal h3,
+.minicart-popup-footer .minicart-popup-subtotal .price{
+  color: var(--color-white);
 }
 /* end modal cart */
 /* css footer */
