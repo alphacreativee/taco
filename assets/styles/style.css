@@ -246,7 +246,10 @@ input[type="number"] {
 /* css intro */
 /* start css heaeder */
 .header {
-  z-index: 99;
+  z-index: 9999;
+}
+.modal.fade .modal-dialog{
+  margin-top: 5rem;
 }
 .header__container {
   padding-inline: 24px;
@@ -1296,7 +1299,7 @@ input[type="number"] {
 }
 .minicart-popup-sumbit {
   position: absolute;
-  bottom: 33px;
+  bottom: -13px;
   z-index: 999;
   left: 50%;
   transform: translateX(-50%);
@@ -1657,15 +1660,27 @@ footer{
   margin-bottom: 12px;
 }
 #thanksModal {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--color-white);
 }
 #thanksModal .btn-close {
   background-image: none;
   width: 46px;
   height: 46px;
   opacity: 1;
-  padding-right: 24px;
-  padding-top: 16px;
+  padding: 0;
+  background-color: var(--color-black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 10px;
+  right: calc(100% + 25px);
+}
+#thanksModal .btn-close svg{
+  width: 16px;
+  height: 16px;
 }
 #thanksModal .btn-close:focus {
   box-shadow: none;
@@ -1687,22 +1702,23 @@ footer{
   transform: translateY(-50px);
 }
 #thanksModal .modal-content {
-  background-image: url("../images/bg_thanks.png");
+  background-image: url("../images/bg_thanks_black.png");
   background-color: transparent;
   background-size: 100% 100%;
   border: none;
 }
 #thanksModal .modal-body {
   text-align: center;
+  padding-top: 40px;
 }
 #thanksModal .modal-body .box h3 {
   font-family: var(--font-primary);
-  font-size: 50px;
-  line-height: 1;
+  font-size: 40px;
+  line-height: 64px;
   font-weight: 400;
   color: var(--color-third);
   transform: rotate(-8deg);
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 #thanksModal .modal-body .box {
   display: flex;
@@ -1713,7 +1729,7 @@ footer{
   max-width: 345px;
 }
 #thanksModal .modal-body .box .content p {
-  color: var(--color-fourth);
+  color: var(--color-white);
 }
 #thanksModal .modal-footer {
   justify-content: center;
@@ -1721,6 +1737,7 @@ footer{
 }
 #thanksModal .modal-footer button {
   transform: translateY(40px);
+  margin-top: 40px;
 }
 #modalBookTable .modal-header {
   position: relative;
