@@ -302,7 +302,26 @@ input[type="number"] {
   color: var(--color-fourth);
   font-family: var(--font-secondary);
 }
-
+#audio-button{
+  position: relative;
+}
+#audio-button img{
+  transition: all 0.3s ease;
+}
+#audio-button .mute{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  inset: 0;
+}
+#audio-button.pause img{
+  opacity: 0;
+  visibility: hidden;
+}
+#audio-button.pause .mute{
+  opacity: 1;
+  visibility: visible;
+}
 /* end css header */
 /* start cta group */
 .cta-group {
@@ -564,6 +583,27 @@ input[type="number"] {
   width: max-content;
   padding: 9px 100px 47px 114px;
   transform: translateX(-114px);
+}
+.menu__container-content .icon-hand{
+  width: 128px;
+  height: 64px;
+
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(50px,-65%);
+  animation: hand_animate 1.5s infinite ease-in-out;
+}
+@keyframes hand_animate {
+  0% {
+    transform: translate(50px,-65%);
+  }
+  50% {
+    transform: translate(0px,-65%);
+  }
+  100% {
+    transform: translate(50px,-65%);
+  }
 }
 .menu__container-content .title span{
   z-index: 1;
