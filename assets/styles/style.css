@@ -1045,7 +1045,7 @@ input[type="number"] {
 }
 .delivery__container .delivery-category .title {
   color: var(--color-secondary);
-  margin-bottom: 100px;
+  margin-bottom: 130px;
   position: relative;
   padding: 14px 107px 26px 57px;
   width: max-content;
@@ -1070,7 +1070,7 @@ input[type="number"] {
 .delivery__container .delivery-category .delivery-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 100px 20px;
+  gap: 130px 20px;
 }
 .delivery__container .delivery-category .delivery-list .delivery-item {
   width: 100%;
@@ -1082,7 +1082,7 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 154px;
+  height: 162px;
 }
 .delivery__container
   .delivery-category
@@ -1102,6 +1102,21 @@ input[type="number"] {
   transform: translate(-50%, -30%);
   z-index: 2;
   top: 0;
+}
+
+.delivery__container .delivery-category .delivery-list .item-wrapper-item{
+  position: relative;
+}
+
+.delivery__container .delivery-category .delivery-list .img{
+  width: calc(100% - 110px);
+  max-width: 220px;
+  aspect-ratio: 220 / 205;
+  bottom: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 140px);
+  z-index: 2;
 }
 
 .delivery__container
@@ -1142,7 +1157,7 @@ input[type="number"] {
     grid-template-columns: repeat(3,1fr);
   }
 }
-@media (max-width: 1080px){
+@media (max-width: 992px){
   .delivery__container .delivery-category .delivery-list{
     grid-template-columns: repeat(2,1fr);
   }
