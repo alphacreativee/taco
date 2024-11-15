@@ -1396,9 +1396,17 @@ input[type="number"] {
 .minicart-popup-footer {
   padding: 26px 28px 32px;
   border-top: 1px solid #F4F1EA;
-  position: sticky;
-  bottom: 0;
   background-color: var(--color-fifth);
+  position: relative;
+}
+.minicart-popup-footer::before{
+  content: "";
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .minicart-popup-footer .minicart-popup-subtotal {
@@ -1765,10 +1773,10 @@ footer{
 #modalBookTable .modal-footer {
   border: none;
 }
-#modalBookTable .time {
+.book__table-form .time {
   position: relative;
 }
-#modalBookTable .time .dropdown-custom__menu {
+.book__table-form .time .dropdown-custom__menu {
   position: absolute;
   opacity: 0;
   visibility: hidden;
@@ -1782,69 +1790,86 @@ footer{
   background-color: #f9f9f9;
   padding: 12px 16px;
 }
-#modalBookTable .time .dropdown-custom__menu .dropdown-custom__item {
+.book__table-form .time .dropdown-custom__menu .dropdown-custom__item {
   margin-bottom: 16px;
 }
-#modalBookTable .time .dropdown-custom__menu .dropdown-custom__item:last-child {
+.book__table-form .time .dropdown-custom__menu .dropdown-custom__item:last-child {
   margin-bottom: 0;
 }
-#modalBookTable .time .dropdown-custom__menu.dropdown--active {
+.book__table-form .time .dropdown-custom__menu.dropdown--active {
   opacity: 1;
   visibility: visible;
 }
-#modalBookTable .book-table .group-form {
+.book__table-form .group-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-bottom: 16px;
 }
-#modalBookTable .book-table .group-form .date {
+.book__table-form .group-form .date {
   width: 100%;
 }
-#modalBookTable .book-table .form-control {
+.book__table-form .form-control {
   padding: 12px 16px;
-  background-image: url("../images/input_border.png");
+  background-image: url("../images/input_border_white.png");
   background-size: 100% 100%;
   border: none;
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
-#modalBookTable .book-table .form-control:focus {
+.book__table-form .form-control:focus {
   box-shadow: none;
 }
-#modalBookTable .book-table input,
-#modalBookTable .book-table input::placeholder {
+.book__table-form input,
+.book__table-form input::placeholder {
   font-family: var(--font-secondary);
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  color: var(--color-fourth);
+  color: var(--color-white);
 }
-#modalBookTable .book-table .name .form-control,
-#modalBookTable .book-table .phone .form-control,
-#modalBookTable .book-table .email .form-control {
-  background-image: url("../images/input_border_full.png");
+.book__table-form .name .form-control,
+.book__table-form .phone .form-control,
+.book__table-form .email .form-control,
+.book__table-form .view .form-control {
+  background-image: url("../images/input_border_full_white.png");
   margin-bottom: 16px;
-  background-color: #f9f9f9;
+  background-color: var(--color-black);
+}
+.book__table-form .aniversary{
+  padding: 12px 16px;
+  background-image: url("../images/input_border_full_white.png");
+  margin-bottom: 16px;
+  background-color: var(--color-black);
+  background-size: 100% 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.book__table-form .aniversary label{
+  color: var(--color-white);
 }
 #modalBookTable .modal-body {
   padding-inline: 28px;
 }
-#modalBookTable .remarks textarea {
-  background-image: url("../images/textarea_border.png");
+.book__table-form .remarks textarea {
+  background-image: url("../images/textarea_border_white.png");
   background-size: 100% 100%;
   border: none;
   width: 100%;
-  padding: 28px 16px;
+  padding: 12px 16px;
   font-family: var(--font-secondary);
   font-size: 14px;
   line-height: 20px;
-  color: var(--color-fourth);
+  color: var(--color-white);
   resize: none;
 }
-#modalBookTable .remarks textarea::placeholder {
+.book__table-form .remarks textarea::placeholder {
   font-family: var(--font-secondary);
   font-size: 14px;
   line-height: 20px;
-  color: var(--color-fourth);
+  color: var(--color-white);
 }
 #modalBookTable .modal-footer {
   justify-content: center;
@@ -2276,3 +2301,55 @@ footer{
   margin-bottom: 24px;
 }
 /* end css offer */
+/* section reservation */
+.section-reservation{
+  padding: 120px 40px 75px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.reservation-wrapper{
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  width: 100%;
+}
+.reservation-wrapper__left{
+  width: 30%;
+}
+.reservation-wrapper__right{
+  width: 60%;
+}
+.reservation-wrapper__right .list-item{
+  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.reservation-wrapper__right .list-item p{
+  margin-top: 12px;
+}
+.reservation-wrapper__right .list-item .img-wrapper{
+  mask-image: url('../images/reservation-1.png');
+  mask-size: 100% 100%;
+  width: 100%;
+  aspect-ratio: 361 / 256;
+}
+.reservation-wrapper__right .list-item .img-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.book__table-form{
+  padding: 46px 28px 80px 28px;
+  background-image: url('../images/bg-reservation.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.book__table-form button{
+  width: max-content;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+/* end section reservation */
