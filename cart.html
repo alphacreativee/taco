@@ -25,6 +25,8 @@
     <!-- import font -->
     <link rel="stylesheet" href="./assets/font/unbounded/font.css" />
     <link rel="stylesheet" href="./assets/font/bringhum/font.css" />
+    <link rel="stylesheet" href="./assets/font/catalish/stylesheet.css">
+    <link rel="stylesheet" href="./assets/font/hermeneus/stylesheet.css">
     <!-- end import font -->
     <!-- import link custom css page -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
@@ -39,45 +41,27 @@
         >
           <div class="header__left justify-content-start">
             <div class="header__music">
-              <a href="">
+              <a href="#" id="audio-button" title="Pause Music" onclick="togglePlayMusic(event)">
                 <img src="./assets/images/ic_music.svg" alt="" />
+                <img src="./assets/images/mute.svg" class="mute" alt="" />
               </a>
+              <audio id="player" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"> </audio>
             </div>
           </div>
           <div class="header__center d-flex align-items-center">
-            <div class="header__menu --left">
-              <ul>
-                <li>
-                  <a href="./index.html" class="h3-font">HOME</a>
-                </li>
-                <li>
-                  <a href="" class="h3-font">ABOUT</a>
-                </li>
-              </ul>
-            </div>
             <div class="header__logo">
               <a href="" class="logo">
                 <img src="./assets/images/logo_full.svg" alt="" />
               </a>
             </div>
-            <div class="header__menu --right">
-              <ul>
-                <li>
-                  <a href="" class="h3-font">MENU</a>
-                </li>
-                <li>
-                  <a href="./offer.html" class="h3-font">OFFERS</a>
-                </li>
-              </ul>
-            </div>
           </div>
           <div class="header__right d-flex justify-content-end">
             <div class="header__phone">
-              <a href="tel:+84 789 92 12 12" class="h3-font"
+              <a href="tel:+84789921212" class="b0-font"
                 >+84 789 92 12 12</a
               >
             </div>
-            <div class="header__lang dropdown-custom">
+            <div class="header__lang dropdown-custom d-none">
               <div class="lang__head dropdown-custom__btn">
                 <div
                   class="value-select dropdown-custom__text h3-font text-center"
@@ -101,24 +85,6 @@
     <!-- custom cursor-->
     <div class="cursor-magic"></div>
     <!-- end cursor-->
-    <!-- start group cta -->
-    <div class="cta-group position-fixed">
-      <div class="cta__list d-flex align-items-center">
-        <button
-          type="button"
-          data-bs-toggle="modal"
-          data-bs-target="#modalBookTable"
-        >
-          <a href="javascript:void(0);" class="button --book">
-            <span class="h4-font">BOOK A TABLE</span>
-          </a>
-        </button>
-        <a href="./delivery.html" class="button --delivery">
-          <span class="h4-font">DELIVERY</span>
-        </a>
-      </div>
-    </div>
-    <!-- end group cta -->
     <!-- modal book table -->
     <div
       class="modal fade"
@@ -273,14 +239,17 @@
       </div>
     </div>
     <!-- end modal thanks -->
-    <main class="page-cart">
+    <main class="page-cart" style="background-image: url('./assets/images/bg-intro-section.png');">
       <div class="cart-sec">
+        <div class="leaf--left">
+          <img src="./assets/images/leaf-1.png" alt="">
+        </div>
         <div class="container-fluid p-0">
           <div class="cart__container">
             <div class="row g-0">
               <div class="col-md-6 offset-md-1">
                 <div class="cart-billing">
-                  <h3 class="h3-font">Billing details</h3>
+                  <h3 class="h1-font">Customer infomation</h3>
                   <div class="cart-form">
                     <div class="group-form">
                       <div class="name">
@@ -326,7 +295,7 @@
                       data-bs-toggle="modal"
                       data-bs-target="#thanksModal"
                     >
-                      <a href="javascript:void(0);" class="h4-font">
+                      <a href="javascript:void(0);" class="btn-custom btn--primary">
                         <span class="h4-font">BOOK NOW</span>
                       </a>
                     </button>
@@ -335,8 +304,14 @@
               </div>
               <div class="col-md-4">
                 <div class="cart-order-summary">
-                  <h3 class="h3-font">order summary</h3>
+                  <h3 class="h1-font">Order summary</h3>
                   <div class="modal-cart">
+                    <div class="leaf--right">
+                      <img src="./assets/images/leaf-4.png" alt="">
+                    </div>
+                    <div class="dishes--top">
+                      <img src="./assets/images/menu-dishes-1.png" alt="">
+                    </div>
                     <div class="minicart-popup-wrapper">
                       <div class="minicart-popup-body">
                         <div class="minicart-popup-item">
@@ -347,24 +322,23 @@
                                 --bg-add-to-cart: url('../images/img_bg_product_1.png');
                               "
                             >
-                              <img
-                                src="./assets/images/img_product_cake_2.png"
-                                alt=""
-                              />
+                              <img src="./assets/images/img_product_cake_2.png" alt="" />
                             </div>
-                            <div class="item-added-to-cart-info">
-                              <h4 class="item-added-to-cart-name h4-font">
-                                mushroom pibil
+                            <div class="item-added-to-cart-info" style="--item-color: #62EE4F;">
+                              <h4 class="item-added-to-cart-name b0-font font-secondary">
+                                Smoked Beef Cheeks (2pcs)
                               </h4>
-                              <p class="item-added-to-cart-price h4-font">
-                                175.000 Đ
-                              </p>
+                              <p class="item-added-to-cart-price b2-font">175.000 Đ</p>
                             </div>
                           </div>
                           <div class="minicart-popup-quanlity">
-                            <span>-</span>
+                            <span class="minus">
+                              <img src="./assets/images/ic_minus.svg" alt="">
+                            </span>
                             <p>1</p>
-                            <span>+</span>
+                            <span class="plus">
+                              <img src="./assets/images/ic_plus.svg" alt="">
+                            </span>
                           </div>
                         </div>
                         <div class="minicart-popup-item">
@@ -375,24 +349,23 @@
                                 --bg-add-to-cart: url('../images/img_bg_product_1.png');
                               "
                             >
-                              <img
-                                src="./assets/images/img_product_cake_2.png"
-                                alt=""
-                              />
+                              <img src="./assets/images/img_product_cake_2.png" alt="" />
                             </div>
-                            <div class="item-added-to-cart-info">
-                              <h4 class="item-added-to-cart-name h4-font">
+                            <div class="item-added-to-cart-info" style="--item-color: #FFC95B;">
+                              <h4 class="item-added-to-cart-name b0-font font-secondary">
                                 mushroom pibil
                               </h4>
-                              <p class="item-added-to-cart-price h4-font">
-                                175.000 Đ
-                              </p>
+                              <p class="item-added-to-cart-price b2-font">175.000 Đ</p>
                             </div>
                           </div>
                           <div class="minicart-popup-quanlity">
-                            <span>-</span>
+                            <span class="minus">
+                              <img src="./assets/images/ic_minus.svg" alt="">
+                            </span>
                             <p>1</p>
-                            <span>+</span>
+                            <span class="plus">
+                              <img src="./assets/images/ic_plus.svg" alt="">
+                            </span>
                           </div>
                         </div>
                         <div class="minicart-popup-item">
@@ -403,31 +376,30 @@
                                 --bg-add-to-cart: url('../images/img_bg_product_1.png');
                               "
                             >
-                              <img
-                                src="./assets/images/img_product_cake_2.png"
-                                alt=""
-                              />
+                              <img src="./assets/images/img_product_cake_2.png" alt="" />
                             </div>
-                            <div class="item-added-to-cart-info">
-                              <h4 class="item-added-to-cart-name h4-font">
+                            <div class="item-added-to-cart-info" style="--item-color: #62EE4F;">
+                              <h4 class="item-added-to-cart-name b0-font font-secondary">
                                 mushroom pibil
                               </h4>
-                              <p class="item-added-to-cart-price h4-font">
-                                175.000 Đ
-                              </p>
+                              <p class="item-added-to-cart-price b2-font">175.000 Đ</p>
                             </div>
                           </div>
                           <div class="minicart-popup-quanlity">
-                            <span>-</span>
+                            <span class="minus">
+                              <img src="./assets/images/ic_minus.svg" alt="">
+                            </span>
                             <p>1</p>
-                            <span>+</span>
+                            <span class="plus">
+                              <img src="./assets/images/ic_plus.svg" alt="">
+                            </span>
                           </div>
                         </div>
                       </div>
                       <div class="minicart-popup-footer">
                         <div class="minicart-popup-subtotal">
-                          <h3 class="h3-font">TOTAL</h3>
-                          <p class="price h3-font">660.000 Đ</p>
+                          <h3 class="b0-font">Subtotal</h3>
+                          <p class="price b0-font">660.000 đ</p>
                         </div>
                       </div>
                     </div>
@@ -441,7 +413,7 @@
       <div class="spacing"></div>
     </main>
     <!-- start footer -->
-    <footer class="footer">
+    <footer class="footer" style="background-image: url('./assets/images/bg-footer.png');">
       <div class="container-fluid p-0">
         <div class="footer__container">
           <div class="footer__top">
@@ -454,33 +426,33 @@
             <div class="footer__content">
               <div class="footer__list">
                 <div class="footer__item --address">
-                  <h3 class="h3-font">TACO DEL SOL</h3>
+                  <h3 class="b0-font">ADDRESS</h3>
                   <p class="address b1-font">
                     4-5 Floor, 110-112 Ly Tu Trong Street, Ben Thanh Ward,
                     District 1, Ho Chi Minh City
                   </p>
                 </div>
                 <div class="footer__item --time">
-                  <h3 class="h3-font">COME TO ME</h3>
+                  <h3 class="b0-font">OPENING TIME</h3>
                   <ul>
                     <li class="b1-font">Lunch: 11.30 am - 3 pm</li>
                     <li class="b1-font">Dinner: 5.30 pm - 11 pm</li>
                   </ul>
                 </div>
                 <div class="footer__item --map">
-                  <h3 class="h3-font">Destination on map</h3>
+                  <h3 class="b0-font">MAP</h3>
                   <div class="img">
                     <img src="./assets/images/ic_map.svg" alt="" />
                   </div>
                 </div>
                 <div class="footer__item --call">
-                  <h3 class="h3-font">CALL ME BABE!</h3>
+                  <h3 class="b0-font">CONTACT US</h3>
                   <a href="tel:+84 789 92 12 12" class="b1-font"
                     >+84 789 92 12 12</a
                   >
                 </div>
                 <div class="footer__item --social">
-                  <h3 class="h3-font">Don't forget me!</h3>
+                  <h3 class="b0-font">FOLLOW US</h3>
                   <ul>
                     <li>
                       <a href=""
@@ -632,7 +604,7 @@
                   </ul>
                 </div>
                 <div class="footer__item --parking">
-                  <h3 class="h3-font">Parking free</h3>
+                  <h3 class="b0-font">PARKING</h3>
                   <div class="img">
                     <img src="./assets/images/ic_parking.svg" alt="" />
                   </div>
@@ -643,23 +615,10 @@
               </div>
             </div>
           </div>
-          <div class="foooter__bottom">
-            <p class="b3-font">© 2024 Taco Del Sol</p>
-            <div class="page">
-              <ul>
-                <li>
-                  <a href="" class="b3-font">Privacy policy</a>
-                </li>
-                <li>
-                  <a href="" class="b3-font">General Terms & Conditions</a>
-                </li>
-                <li>
-                  <a href="" class="b3-font">Payment method</a>
-                </li>
-              </ul>
-            </div>
+          <div class="footer__bottom">
+            <p class="b2-font">© 2024 Taco Del Sol</p>
             <div class="author">
-              <a href="https://alphacreative.vn/" class="b3-font"
+              <a href="https://alphacreative.vn/" class="b2-font"
                 >Digital Experience by Alpha Creative</a
               >
             </div>

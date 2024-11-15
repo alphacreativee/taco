@@ -5,6 +5,7 @@
   --color-fourth: #25BCC0;
   --color-fifth: #030303;
   --color-white: #fff;
+  --color-black: #000;
 
   --font-primary: "Catalish Huntera";
   --font-secondary: "HermeneusOne";
@@ -901,9 +902,56 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
+}
+.page-cart{
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.page-cart .cart-sec{
+  position: relative;
+}
+.page-cart .leaf--left{
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  left: -70px;
+}
+.page-cart .leaf--left:hover{
+  animation: rotate_animate 1s infinite linear;
+}
+.page-cart .leaf--left img{
+  width: 200px;
+  height: 136px;
+}
+.modal-cart .leaf--right img{
+  width: 270px;
+  height: 180px;
+}
+.modal-cart .leaf--right{
+  position: absolute;
+  z-index: 1;
+  bottom: -50px;
+  right: 85%;
+  width: 270px;
+}
+.modal-cart .dishes--top img{
+  width: 117px;
+  height: 114px;
+}
+.modal-cart .dishes--top{
+  position: absolute;
+  right: -40px;
+  bottom: 90%;
+  z-index: 1;
+}
+.modal-cart .leaf--right:hover,
+.modal-cart .dishes--top:hover{
+  animation: rotate_animate 1s infinite linear;
 }
 .restaurant__btn a {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   width: 130px;
@@ -915,15 +963,15 @@ input[type="number"] {
   background-size: 100% 100%;
   color: var(--color-fourth);
   transition: all 0.2s ease;
-  overflow: hidden;
+  overflow: hidden; */
 }
-.restaurant__btn a:hover {
+/* .restaurant__btn a:hover {
   background-image: url("../images/img_bg_hover.svg");
   mask-image: url("../images/img_bg_hover.svg");
 }
 .restaurant__btn a span {
   transform: translateY(2px);
-}
+} */
 /* end style restaurant sec */
 
 /* start style events */
@@ -1226,6 +1274,7 @@ input[type="number"] {
   display: flex;
   align-items: flex-start;
   gap: 16px;
+  position: relative;
 }
 .modal-cart .btn-close {
   background: none;
@@ -1548,7 +1597,7 @@ footer{
   margin-bottom: 16px;
 }
 .cart-billing h3,
-.cart-order-summary h3 {
+.cart-order-summary > h3 {
   margin-bottom: 20px;
 }
 .cart-billing .group-form .name,
@@ -1589,18 +1638,18 @@ footer{
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  color: var(--color-fourth);
+  color: var(--color-black);
 }
 .cart-billing .cart-form input::placeholder,
 .cart-billing .cart-form textarea::placeholder {
-  color: var(--color-fourth);
+  color: var(--color-black);
 }
 .cart-billing .cart-form textarea {
   font-family: var(--font-secondary);
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  color: var(--color-fourth);
+  color: var(--color-black);
   resize: none;
 }
 .cart-billing .form-note {
