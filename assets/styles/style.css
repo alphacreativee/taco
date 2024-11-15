@@ -191,7 +191,7 @@ input[type="number"] {
 /* end set minxin */
 /* css intro */
 .intro {
-  z-index: 9999;
+  z-index: 99999;
   inset: 0;
   background-color: #030303;
 }

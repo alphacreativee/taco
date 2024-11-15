@@ -32,127 +32,6 @@
     <link rel="stylesheet" href="./assets/styles/style.css" />
     <!-- end link custom css page -->
   </head>
-  <main>
-    <section class="section-reservation" style="background-image: url('./assets/images/background-blue.png');">
-        <div class="container-fluid">
-            <div class="reservation-wrapper">
-                <div class="reservation-wrapper__left">
-                    <form class="book__table-form">
-                        <div class="group-form">
-                          <div class="date">
-                            <input
-                              type="text"
-                              id="selectDate"
-                              autocomplete="off"
-                              placeholder="Select a date*"
-                              class="form-control"
-                            />
-                          </div>
-                          <div class="time form-control">
-                            <div class="dropdown-custom">
-                              <div
-                                class="select-head dropdown-custom__btn d-flex align-items-center justify-content-between"
-                              >
-                                <p class="b2-font dropdown-custom__text">Select time*</p>
-                                <img src="./assets/images/ic_arrows.svg" alt="" />
-                              </div>
-                              <div class="dropdown-custom__menu">
-                                <div class="dropdown-custom__item b2-font">
-                                  11.30 am - 3 pm
-                                </div>
-                                <div class="dropdown-custom__item b2-font">
-                                  5.30 pm - 11 pm
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="group-form">
-                          <div class="adult">
-                            <input
-                              type="number"
-                              placeholder="Adult"
-                              class="form-control"
-                            />
-                          </div>
-                          <div class="children">
-                            <input
-                              type="number"
-                              placeholder="Children"
-                              class="form-control"
-                            />
-                          </div>
-                        </div>
-                        <div class="view">
-                            <input
-                              type="text"
-                              placeholder="View*"
-                              class="form-control"
-                            />
-                          </div>
-                        <div class="name">
-                          <input
-                            type="text"
-                            placeholder="Name of booking*"
-                            class="form-control"
-                          />
-                        </div>
-                        <div class="phone">
-                            <input
-                              placeholder="Your phone number*"
-                              class="form-control"
-                              type="number"
-                              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                            />
-                        </div>
-                        <div class="aniversary">
-                            <label for="aniversary" class="b2-font">Aniversary</label>
-                            <input type="checkbox" id="aniversary">
-                        </div>
-                        <div class="remarks">
-                          <textarea
-                            rows="4"
-                            cols="50"
-                            placeholder="Other notes"
-                          ></textarea>
-                        </div>
-                        <button type="submit" class="btn-custom btn--primary">
-                            <span>Book a table</span>
-                        </button>
-                    </form>
-                </div>
-                <div class="reservation-wrapper__right">
-                    <ul class="list-item">
-                        <li class="item">
-                            <div class="img-wrapper">
-                                <img src="./assets/images/img_banner.png" alt="">
-                            </div>
-                            <p class="b2-font text-center">Bar Seats</p>
-                        </li>
-                        <li class="item">
-                            <div class="img-wrapper">
-                                <img src="./assets/images/img_banner.png" alt="">
-                            </div>
-                            <p class="b2-font text-center">Bar Seats</p>
-                        </li>
-                        <li class="item">
-                            <div class="img-wrapper">
-                                <img src="./assets/images/img_banner.png" alt="">
-                            </div>
-                            <p class="b2-font text-center">Bar Seats</p>
-                        </li>
-                        <li class="item">
-                            <div class="img-wrapper">
-                                <img src="./assets/images/img_banner.png" alt="">
-                            </div>
-                            <p class="b2-font text-center">Bar Seats</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-  </main>
   <body>
     <!-- start header -->
     <header class="header position-fixed top-0 start-0 end-0">
@@ -162,7 +41,7 @@
         >
           <div class="header__left justify-content-start">
             <div class="header__music">
-              <a href="#" id="audio-button" title="Pause Music" onclick="togglePlayMusic(event)">
+              <a href="#" id="audio-button" class="pause" title="Pause Music" onclick="togglePlayMusic(event)">
                 <img src="./assets/images/ic_music.svg" alt="" />
                 <img src="./assets/images/mute.svg" class="mute" alt="" />
               </a>
@@ -205,6 +84,127 @@
     <!-- end header -->
     <!-- custom cursor-->
     <div class="cursor-magic"></div>
+    <main>
+      <section class="section-reservation" style="background-image: url('./assets/images/background-blue.png');">
+          <div class="container-fluid">
+              <div class="reservation-wrapper">
+                  <div class="reservation-wrapper__left">
+                      <form class="book__table-form">
+                          <div class="group-form">
+                            <div class="date">
+                              <input
+                                type="text"
+                                id="selectDate"
+                                autocomplete="off"
+                                placeholder="Select a date*"
+                                class="form-control"
+                              />
+                            </div>
+                            <div class="time form-control">
+                              <div class="dropdown-custom">
+                                <div
+                                  class="select-head dropdown-custom__btn d-flex align-items-center justify-content-between"
+                                >
+                                  <p class="b2-font dropdown-custom__text">Select time*</p>
+                                  <img src="./assets/images/ic_arrows.svg" alt="" />
+                                </div>
+                                <div class="dropdown-custom__menu">
+                                  <div class="dropdown-custom__item b2-font">
+                                    11.30 am - 3 pm
+                                  </div>
+                                  <div class="dropdown-custom__item b2-font">
+                                    5.30 pm - 11 pm
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="group-form">
+                            <div class="adult">
+                              <input
+                                type="number"
+                                placeholder="Adult"
+                                class="form-control"
+                              />
+                            </div>
+                            <div class="children">
+                              <input
+                                type="number"
+                                placeholder="Children"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                          <div class="view">
+                              <input
+                                type="text"
+                                placeholder="View*"
+                                class="form-control"
+                              />
+                            </div>
+                          <div class="name">
+                            <input
+                              type="text"
+                              placeholder="Name of booking*"
+                              class="form-control"
+                            />
+                          </div>
+                          <div class="phone">
+                              <input
+                                placeholder="Your phone number*"
+                                class="form-control"
+                                type="number"
+                                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                              />
+                          </div>
+                          <div class="aniversary">
+                              <label for="aniversary" class="b2-font">Aniversary</label>
+                              <input type="checkbox" id="aniversary">
+                          </div>
+                          <div class="remarks">
+                            <textarea
+                              rows="4"
+                              cols="50"
+                              placeholder="Other notes"
+                            ></textarea>
+                          </div>
+                          <button type="submit" class="btn-custom btn--primary">
+                              <span>Book a table</span>
+                          </button>
+                      </form>
+                  </div>
+                  <div class="reservation-wrapper__right">
+                      <ul class="list-item">
+                          <li class="item">
+                              <div class="img-wrapper">
+                                  <img src="./assets/images/img_banner.png" alt="">
+                              </div>
+                              <p class="b2-font text-center">Bar Seats</p>
+                          </li>
+                          <li class="item">
+                              <div class="img-wrapper">
+                                  <img src="./assets/images/img_banner.png" alt="">
+                              </div>
+                              <p class="b2-font text-center">Bar Seats</p>
+                          </li>
+                          <li class="item">
+                              <div class="img-wrapper">
+                                  <img src="./assets/images/img_banner.png" alt="">
+                              </div>
+                              <p class="b2-font text-center">Bar Seats</p>
+                          </li>
+                          <li class="item">
+                              <div class="img-wrapper">
+                                  <img src="./assets/images/img_banner.png" alt="">
+                              </div>
+                              <p class="b2-font text-center">Bar Seats</p>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
+    </main>
     <!-- start footer -->
     <footer class="footer" style="background-image: url('./assets/images/bg-footer.png');">
         <div class="container-fluid p-0">

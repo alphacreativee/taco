@@ -1,14 +1,13 @@
 // A $( document ).ready() block.
 $(document).ready(function () {
   magicCursor();
-  intro(function () {
-    language();
-    header();
-    animationText();
-    bookTable();
-  });
+  intro();
+  language();
+  header();
+  animationText();
+  bookTable();
 });
-function intro(callback) {
+function intro() {
   if ($(".intro").length) {
     const $intro = $(".intro");
     // $("body").addClass("overflow-hidden");
