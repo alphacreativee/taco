@@ -1791,7 +1791,7 @@ footer{
   bottom: -2px;
   transform: translateY(100%);
   background-color: var(--color-white);
-  padding: 4px 6px 4px 9px;
+  padding: 6px 6px 6px 9px;
 }
 .book__table-form .dropdown-custom__menu .dropdown-custom__item {
   color: var(--color-black);
@@ -1835,7 +1835,7 @@ footer{
 .book__table-form input[type='phone'] + label,
 .book__table-form input[type='number'] + label,
 .book__table-form textarea + label,
-.book__table-form .dropdown-custom__btn label  {
+.book__table-form .dropdown-custom__btn label{
   position: absolute;
   left: 12px;
   top: 50%;
@@ -1861,7 +1861,8 @@ footer{
   width: 12px;
   height: 10px;
 }
-.book__table-form .dropdown-custom__btn.open label{
+.book__table-form .dropdown-custom__btn.open label,
+.book__table-form input.active + label{
   position: absolute;
   top: 0;
   font-size: 10px;

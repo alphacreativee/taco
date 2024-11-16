@@ -6,6 +6,7 @@ $(document).ready(function () {
   header();
   animationText();
   bookTable();
+  activeInputForm();
 });
 function intro() {
   if ($(".intro").length) {
@@ -134,6 +135,28 @@ function language() {
       });
     }
   });
+}
+
+function activeInputForm(){
+  const inputs = $(".book__table-form input");
+
+  if(inputs.length < 1) return;
+
+  inputs.each(function(){
+    const thisInput = $(this);
+
+    if(thisInput.text().trim() !== ''){
+      thisInput.addClass("active");
+    }
+  })
+
+  inputs.on("change", function(){
+    const thisInput = $(this);
+
+    if(thisInput.text().trim() !== ' '){
+      thisInput.addClass("active");
+    }
+  })
 }
 // function animtionText() {
 //   gsap.registerPlugin(SplitType);
