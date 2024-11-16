@@ -1773,32 +1773,44 @@ footer{
 #modalBookTable .modal-footer {
   border: none;
 }
-.book__table-form .time {
+.book__table-form .time,
+.book__table-form .adult,
+.book__table-form .children {
   position: relative;
+  padding-right: 30px;
 }
-.book__table-form .time .dropdown-custom__menu {
+.book__table-form .form-control .dropdown-custom__menu {
   position: absolute;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  background-image: url("../images/v3.png");
-  background-size: 100% 100%;
+  mask-image: url("../images/bg-dropdown.png");
+  mask-size: 100% 100%;
   left: 0;
   right: 0;
-  bottom: -16px;
+  bottom: -2px;
   transform: translateY(100%);
-  background-color: #f9f9f9;
-  padding: 12px 16px;
+  background-color: var(--color-white);
+  padding: 4px 6px 4px 9px;
 }
-.book__table-form .time .dropdown-custom__menu .dropdown-custom__item {
-  margin-bottom: 16px;
+.book__table-form .dropdown-custom__menu .dropdown-custom__item {
+  color: var(--color-black);
+  padding: 4px 10px;
+  background-size: 100% 100%;
+  background-image: none;
+  background-repeat: no-repeat;
+  transition: all 0.4s ease;
 }
-.book__table-form .time .dropdown-custom__menu .dropdown-custom__item:last-child {
+.book__table-form .dropdown-custom__menu .dropdown-custom__item:hover{
+  background-image: url('../images/bg-dropdown-item.png');
+}
+.book__table-form .dropdown-custom__menu .dropdown-custom__item:last-child {
   margin-bottom: 0;
 }
-.book__table-form .time .dropdown-custom__menu.dropdown--active {
+.book__table-form .dropdown-custom__menu.dropdown--active {
   opacity: 1;
   visibility: visible;
+  z-index: 2;
 }
 .book__table-form .group-form {
   display: grid;
@@ -1806,8 +1818,80 @@ footer{
   gap: 24px;
   margin-bottom: 16px;
 }
+.book__table-form .group-form input{
+  height: 100%;
+}
+.book__table-form label{
+  transition: all 0.4s ease;
+}
+.book__table-form .group-form label{
+  transition: all 0.4s ease;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: var(--font-secondary);
+  color: var(--color-white);
+}
+.book__table-form input[type='text'] + label,
+.book__table-form input[type='phone'] + label,
+.book__table-form input[type='number'] + label,
+.book__table-form textarea + label,
+.book__table-form .dropdown-custom__btn label  {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: var(--font-secondary);
+  color: var(--color-white);
+}
+.book__table-form input[type='text'] + label,
+.book__table-form input[type='phone'] + label,
+.book__table-form input[type='number'] + label,
+.book__table-form textarea + label{
+  user-select: none;
+  pointer-events: none;
+}
+.book__table-form .form-control .dropdown-custom__btn img{
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 10px;
+}
+.book__table-form .dropdown-custom__btn.open label{
+  position: absolute;
+  top: 0;
+  font-size: 10px;
+  line-height: 11px;
+  padding: 0 5px;
+  background-color: var(--color-black);
+}
+.book__table-form .remarks textarea + label  {
+  top: 20px;
+}
+
+.book__table-form input[type='text']:focus + label,
+.book__table-form input[type='phone']:focus + label,
+.book__table-form input[type='number']:focus + label,
+.book__table-form textarea:focus + label{
+  top: 0;
+  font-size: 10px;
+  line-height: 11px;
+  padding: 0 5px;
+  background-color: var(--color-black);
+}
+.book__table-form .phone,
+.book__table-form .name,
+.book__table-form .time,
+.book__table-form .remarks{
+  position: relative;
+}
 .book__table-form .group-form .date {
   width: 100%;
+  position: relative;
 }
 .book__table-form .form-control {
   padding: 12px 16px;
@@ -1816,6 +1900,10 @@ footer{
   border: none;
   background-color: var(--color-black);
   color: var(--color-white);
+  min-height: 44px;
+}
+.book__table-form .time{
+  padding-right: 30px;
 }
 .book__table-form .form-control:focus {
   box-shadow: none;
@@ -1827,6 +1915,10 @@ footer{
   line-height: 20px;
   font-weight: 400;
   color: var(--color-white);
+}
+.book__table-form .view.form-control{
+  margin-bottom: 16px;
+  position: relative;
 }
 .book__table-form .name .form-control,
 .book__table-form .phone .form-control,
@@ -1846,9 +1938,42 @@ footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .book__table-form .aniversary label{
   color: var(--color-white);
+}
+.book__table-form .aniversary input{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  z-index: 2;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  appearance: none;
+}
+.book__table-form .aniversary .icon{
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  position: relative;
+}
+.book__table-form .aniversary .icon svg{
+  position: absolute;
+  left: 3px;
+  bottom: 2px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+.book__table-form .aniversary input:checked + .icon svg{
+  opacity: 1;
+  visibility: visible;
 }
 #modalBookTable .modal-body {
   padding-inline: 28px;
@@ -1880,7 +2005,7 @@ footer{
 }
 .lightpick__inner,
 .lightpick {
-  background-color: #f9f9f9;
+  background-color: transparent;
   box-shadow: none;
   padding: 0;
 }
@@ -1898,7 +2023,7 @@ footer{
 }
 .lightpick__month {
   box-shadow: none;
-  border: 6px solid black;
+  /* border: 6px solid black; */
   background-color: transparent;
   padding: 12px 16px;
   border-image-source: url("../images/img_calender.png");

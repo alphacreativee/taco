@@ -17,7 +17,7 @@ function intro() {
 
     const tl = gsap.timeline({
       onComplete: () => {
-        callback();
+        // callback();
       },
     });
 
@@ -92,8 +92,15 @@ function language() {
     $btnDropdown.on("click", function (e) {
       e.stopPropagation();
       closeAllDropdowns($dropdown);
+      
       $dropdownMenu.toggleClass("dropdown--active");
       $(".lang__head").toggleClass("--active");
+
+      let thisDropdown = $(this);
+      
+      if($textDropdown.text().trim() === ''){
+        thisDropdown.toggleClass("open");
+      }
     });
 
     $(document).on("click", function () {
@@ -116,6 +123,13 @@ function language() {
         const $menu = $(this).find(".dropdown-custom__menu");
         if (!exception || !$(this).is(exception)) {
           $menu.removeClass("dropdown--active");
+        }
+
+        let thisDropdownButton = $(this).find(".dropdown-custom__btn");
+        let thisTextDropdown = thisDropdownButton.find(".dropdown-custom__text");
+        
+        if(thisTextDropdown.text().trim() === ''){
+          thisDropdownButton.removeClass("open");
         }
       });
     }
@@ -184,7 +198,7 @@ function animationText() {
   });
 }
 function bookTable() {
-  if ($(".book-table").length) {
+  if ($(".book__table-form").length) {
     var picker = new Lightpick({
       field: document.getElementById("selectDate"),
       minDate: moment().startOf("day"),
