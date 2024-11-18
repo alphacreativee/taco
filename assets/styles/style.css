@@ -64,7 +64,7 @@ body {
   line-height: 1;
   cursor: none;
   overflow-x: hidden;
-  background-image: url("../images/img_body_bg.png");
+  /* background-image: url("../images/img_body_bg.png"); */
   background-size: 100% 100%;
   scroll-behavior: smooth;
 }
@@ -430,7 +430,7 @@ input[type="number"] {
 .section-intro{
   padding: 90px 0 70px;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 110%;
   background-position: left;
   position: relative;
   z-index: 2;
@@ -561,7 +561,15 @@ input[type="number"] {
   position: relative;
   overflow: hidden;
 }
+.section-menu .menu__container{
+  display: grid;
+  grid-template-columns: 2fr 4fr 1fr 4fr 1fr;
+}
+.section-menu .menu__container-content{
+  grid-column: 2 / 3;
+}
 .section-menu .menu__container-img{
+  grid-column: 4 / 5;
   position: relative;
 }
 .section-menu .menu__container-img .img-wrapper{
@@ -1503,6 +1511,9 @@ input[type="number"] {
   color: var(--color-primary);
   margin-bottom: 18px;
 }
+.footer__item.--map .img:hover{
+
+}
 .footer__item.--address p {
   color: var(--color-white);
 }
@@ -1903,6 +1914,11 @@ footer{
   color: var(--color-white);
   min-height: 44px;
 }
+.book__table-form .form-control .dropdown-custom,
+.book__table-form .form-control .dropdown-custom .dropdown-custom__btn{
+  position: absolute;
+  inset: 0;
+}
 .book__table-form .time{
   padding-right: 30px;
 }
@@ -1930,7 +1946,7 @@ footer{
   background-color: var(--color-black);
 }
 .book__table-form .aniversary{
-  padding: 12px 16px;
+  padding: 0 16px;
   background-image: url("../images/input_border_full_white.png");
   margin-bottom: 16px;
   background-color: var(--color-black);
@@ -1943,6 +1959,9 @@ footer{
 }
 .book__table-form .aniversary label{
   color: var(--color-white);
+  width: 100%;
+  height: 100%;
+  padding: 12px 0;
 }
 .book__table-form .aniversary input{
   width: 20px;

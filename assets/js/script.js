@@ -4,7 +4,6 @@ $(document).ready(function () {
   intro();
   language();
   header();
-  animationText();
   bookTable();
   activeInputForm();
 });
