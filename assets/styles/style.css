@@ -1224,6 +1224,26 @@ input[type="number"] {
   .description {
   margin-bottom: 24px;
 }
+.delivery__container .delivery-category .delivery-list .delivery-item .box-content .add-to-cart{
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #108A00;
+  transition: all 0.3s ease;
+}
+.delivery__container .delivery-category .delivery-list .delivery-item .box-content .add-to-cart:hover{
+  background-color: var(--color-secondary);
+}
+.delivery__container .delivery-category .delivery-list .delivery-item .box-content .add-to-cart svg{
+  width: 9px;
+  height: 10px;
+  display: block;
+  transform: translateX(0.5px);
+}
 .delivery__container .delivery-category .delivery-list .delivery-item .box-content .description .p{
   overflow: hidden;
   display: -webkit-box;
@@ -1301,15 +1321,16 @@ input[type="number"] {
   mask-size: 100% 100%;
   overflow-y: scroll;
   pointer-events: auto;
+  padding-top: 20px;
 }
 .minicart-popup-inner {
   position: relative;
 }
 .minicart-popup-sumbit {
   position: absolute;
-  bottom: -13px;
+  bottom: -20px;
   z-index: 999;
-  left: 50%;
+  left: calc(50% + 47px);
   transform: translateX(-50%);
   overflow: hidden;
 }
@@ -1337,9 +1358,13 @@ input[type="number"] {
 }
 .custom-modal .modal-dialog {
   transform: translateX(-86px) !important;
+  height: calc(100vh - 10rem);
+  min-height: unset;
 }
 .custom-modal {
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 100vh;
+  z-index: 99999;
 }
 .minicart-popup-wrapper .item-added-to-cart-image {
   background-position: center;
@@ -1348,7 +1373,7 @@ input[type="number"] {
   min-width: 80px;
 }
 .minicart-popup-body {
-  padding: 20px 28px 20px;
+  padding: 0 28px 20px;
   height: calc(100% - 100px);
   overflow: scroll;
 }
@@ -1412,7 +1437,7 @@ input[type="number"] {
   width: 100%;
   height: 50%;
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% + 1px);
   left: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
